@@ -28,7 +28,8 @@ h1, h2, h3 {
 header {
   background-color: var(--white);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  font-weight: 600;
   align-items: center;
   padding: 15px 60px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -37,14 +38,31 @@ header {
   z-index: 100;
 }
 
+.container{
+
+  width: 100%;
+  max-width: 1180px;
+
+}
+
+.header-container{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo img {
-  width: 150px;
+#logoHeader{
+
+  width: 73.6px;
+  height: 69.82px;
 }
 
 nav {
