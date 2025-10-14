@@ -1,3 +1,14 @@
+:root{
+
+  --darkCyan: #063643;
+  --cyan: #0F637A;
+  --white: #F8F8FF;
+  --lightBlueBackground: #E2F5FA;
+  --sobreBackground: #63B3C9;
+  --servicoBackgrund: #89C5D5;
+
+}
+
 /* ====== ESTILOS GERAIS ====== */
 body {
   margin: 0;
