@@ -1,3 +1,127 @@
+/*  VARIÁVEIS E CONFIGURAÇÕES GERAIS  */
+:root {
+    /* Cores CORRETAS */
+    --primary-color: #2D5B3E;
+    --secondary-color: #6A8D73;
+    --accent-color: #F4A261;
+    --light-color: #F8F9FA;
+    --dark-color: #2C3E50;
+    --text-color: #333333;
+    --text-light: #6C757D;
+    --white: #FFFFFF;
+
+   /* Tipografia */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    
+    /* Espaçamentos */
+    --spacing-xs: 2px;
+    --spacing-sm: 4px;
+    --spacing-md: 8px;
+    --spacing-lg: 12px;
+    --spacing-xl: 16px;
+    --spacing-xxl: 20px;
+    --spacing-xxxl: 24px;
+    --spacing-xxxxl: 28px;
+    --spacing-xxxxxl: 32px;
+  
+     /* Tamanhos de fonte */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-xxl: 24px;
+    --text-xxxl: 28px;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* RESET E CONFIGURAÇÕES BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.container-menor {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+/* HEADER E NAVEGAÇÃO */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.logo img {
+    height: 40px;
+}
+.logo span {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: var(--text-xl);
+    color: var(--primary-color);
+}
+
+.menu-principal ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-xxxxl);
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: var(--text-base);
+    transition: color 0.3s ease;
+}
+
+.menu-principal a:hover {
+    color: var(--primary-color);
+}
+
 /* ====== ESTILOS GERAIS ====== */
 body {
   margin: 0;
