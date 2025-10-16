@@ -1,0 +1,21 @@
+[33m910653e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelopment[m[33m, [m[1;31morigin/development[m[33m)[m Integrando arquivos da branch css-ajustes-maria na development
+[33m387dad2[m Integrando arquivos da branch css-ajustes-maria na development
+[33m45f5822[m Merge de css-ajustes-maria em development
+[33m2541019[m[33m ([m[1;31morigin/css-ajustes-maria[m[33m, [m[1;32mcss-ajustes-maria[m[33m)[m ajustes de layout e atualização no CSS
+[33m4e68cb0[m feat: Centralize header
+[33mff3d6fc[m refatc: adjust the logo image name
+[33md41607e[m refact: rename images folder
+[33m96ed3b3[m feat: Add new images for logo
+[33m6795799[m refact: Change colors and adjust nav, a, ul and li
+[33m14e4619[m refactor: change colors for variables
+[33m808fa4e[m feat: Add common colors
+[33m2a1b86c[m style: Mudar fonte do body
+[33m5a88c47[m Remove index.html que não está sendo usado
+[33md448f10[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m refact: deletar index.html
+[33m1f91c2e[m[33m ([m[1;32mmain[m[33m)[m Merge branch 'main' of https://github.com/JulianoMXM/Pindorama-Pets
+[33m3d93c2b[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/juliano[m[33m)[m feat: adiciona desktopModal.html e imagens dos médicos, serviços e usuários
+[33mfb34961[m Adicionei os arquivos do site Pindorama Pets
+[33mfb60d1e[m feat: adiciona desktopModal.html e imagens dos médicos, serviços e usuários
+[33m328a7c0[m Reset
+[33m2f9cb0b[m Primeiro commit do projeto PindoramaPets
+[33m87bc80a[m Adicionei os arquivos do site Pindorama Pets
