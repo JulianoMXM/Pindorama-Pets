@@ -1,43 +1,11 @@
 /*  VARIÁVEIS E CONFIGURAÇÕES GERAIS  */
 :root {
     /* Cores CORRETAS */
-    --primary-color: #2D5B3E;
-    --secondary-color: #6A8D73;
-    --accent-color: #F4A261;
-    --light-color: #F8F9FA;
-    --dark-color: #2C3E50;
-    --text-color: #333333;
-    --text-light: #6C757D;
-    --white: #FFFFFF;
-
-   /* Tipografia */
-    --font-primary: 'Poppins', sans-serif;
-    --font-secondary: 'Open Sans', sans-serif;
-    
-    /* Espaçamentos */
-    --spacing-xs: 2px;
-    --spacing-sm: 4px;
-    --spacing-md: 8px;
-    --spacing-lg: 12px;
-    --spacing-xl: 16px;
-    --spacing-xxl: 20px;
-    --spacing-xxxl: 24px;
-    --spacing-xxxxl: 28px;
-    --spacing-xxxxxl: 32px;
-  
-     /* Tamanhos de fonte */
-    --text-xs: 12px;
-    --text-sm: 14px;
-    --text-base: 16px;
-    --text-lg: 18px;
-    --text-xl: 20px;
-    --text-xxl: 24px;
-    --text-xxxl: 28px;
-    
-    /* Sombras */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
-    --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+    --primary-color: #063643; /* cores principais: títulos, destaques, botões */
+    --accent-color: #0f637A;  /* destaques de atenção: botões, bordas, ícones */
+    --light-color: #F8FCFF;   /* fundos claros: seções, cards */
+    --dark-color: #063643;     /* rodapé, textos escuros */
+    --text-color: #063643;     /* textos principais */
 }
 
 /* RESET E CONFIGURAÇÕES BASE */
@@ -56,156 +24,82 @@ body {
     font-size: var(--text-base);
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--white);
+    background-color: var(--light-color);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-xl);
-}
-
-.container-menor {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-xl);
-}
-
-/* HEADER E NAVEGAÇÃO */
+/*  CABEÇALHO  */
 header {
-    background-color: var(--white);
-    box-shadow: var(--shadow-sm);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
+    background-color: var(--light-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-lg) var(--spacing-xl);
+    padding: 15px 60px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: 10px;
 }
 
 .logo img {
-    height: 40px;
-}
-.logo span {
-    font-family: var(--font-primary);
-    font-weight: 700;
-    font-size: var(--text-xl);
-    color: var(--primary-color);
-}
-
-.menu-principal ul {
-    display: flex;
-    list-style: none;
-    gap: var(--spacing-xxxxl);
-}
-
-.menu-principal a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    font-size: var(--text-base);
-    transition: color 0.3s ease;
-}
-
-.menu-principal a:hover {
-    color: var(--primary-color);
-}
-
-/* ====== ESTILOS GERAIS ====== */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #e6f4f8;
-  color: #333;
-  scroll-behavior: smooth;
-}
-
-h1, h2, h3 {
-  color: #004d61;
-}
-
-/* ====== CABEÇALHO ====== */
-header {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 60px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  width: 150px;
+    width: 150px;
 }
 
 .nav-links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #004d61;
-  font-weight: bold;
-  transition: 0.3s;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #007b8e;
+    color: var(--accent-color);
 }
 
-/* ====== BOTÕES DO CABEÇALHO ====== */
+/*  BOTÕES DO CABEÇALHO  */
 .menu-btn, .tema-btn {
-  background: none;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
 }
 
-/* ====== BANNER ====== */
+/*  BANNER  */
 .banner {
-  text-align: center;
-  background-color: #d6f2f8;
-  padding: 80px 20px;
+    text-align: center;
+    background-color: var(--light-color);
+    padding: 80px 20px;
 }
 
 .banner h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
 .banner button {
-  background-color: #007b8e;
-  color: rgb(255, 255, 255);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .banner button:hover {
-  background-color: #005f6a;
+    background-color: var(--primary-color);
 }
+
 
 /* ====== SERVIÇOS ====== */
 #servicos {
@@ -222,7 +116,7 @@ header {
 }
 
 .card {
-  background-color: white;
+  background-color: light-color;
   border-radius: 10px;
   padding: 20px;
   width: 250px;
