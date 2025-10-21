@@ -1,103 +1,139 @@
 /*  VARIÁVEIS E CONFIGURAÇÕES GERAIS  */
 :root {
-    /* Cores CORRETAS */
-    --primary-color: #063643; /* cores principais: títulos, destaques, botões */
-    --accent-color: #0f637A;  /* destaques de atenção: botões, bordas, ícones */
-    --light-color: #F8FCFF;   /* fundos claros: seções, cards */
-    --dark-color: #063643;     /* rodapé, textos escuros */
-    --text-color: #063643;     /* textos principais */
+  /* Cores CORRETAS */
+  --primary-color: #063643; /* cores principais: títulos, destaques, botões */
+  --accent-color: #0f637A;  /* destaques de atenção: botões, bordas, ícones */
+  --light-color: #F8F8FF;   /* fundos claros: seções, cards */
+  --dark-color: #063643;     /* rodapé, textos escuros */
+  --text-color: #063643;     /* textos principais */
+  --light-background: #E2F5FA; /*fundos claros: profissionais, avaliações, contato, banner*/
 }
 
 /* RESET E CONFIGURAÇÕES BASE */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.container{
+
+  display: flex;
+  width: 100%;
+  max-width: 1180px;
+
+}
+
+.container-menor{
+
+  display: flex;
+  width: 100%;
+  max-width: 1020px;
+
 }
 
 body {
-    font-family: var(--font-primary);
-    font-size: var(--text-base);
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--light-color);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-color);
 }
 
 /*  CABEÇALHO  */
 header {
-    background-color: var(--light-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.header-container{
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  
+  
 }
 
-.logo img {
-    width: 150px;
+.logo{
+
+  display: flex;
+  align-items: center;
+
 }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
+.menu-principal{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: bold;
-    transition: 0.3s;
+.item{
+  
+  display: inline-block;
+  list-style: none;
+  flex-grow: 1;
+
 }
 
-.nav-links a:hover {
-    color: var(--accent-color);
+.menu-principal {
+  display: flex;
+}
+
+.menu-principal a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu-principal a:hover {
+  color: var(--accent-color);
 }
 
 /*  BOTÕES DO CABEÇALHO  */
 .menu-btn, .tema-btn {
-    background: none;
-    border: none;
-    font-size: 1.3rem;
-    cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 /*  BANNER  */
 .banner {
-    text-align: center;
-    background-color: var(--light-color);
-    padding: 80px 20px;
+  text-align: center;
+  background-color: var(--light-color);
+  padding: 80px 20px;
 }
 
 .banner h2 {
     font-size: 28px;
-    margin-bottom: 10px;
-    color: var(--primary-color);
+  margin-bottom: 10px;
+  color: var(--primary-color);
 }
 
 .banner button {
-    background-color: var(--accent-color);
-    color: var(--light-color);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .banner button:hover {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 
