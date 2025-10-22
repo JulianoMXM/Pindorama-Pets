@@ -1,234 +1,185 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pindorama Pets - Veterinária</title>
 
-<html>
-    <html lang ="pt-BR">
-    <head>
-        <meta charset= "UTF-8">
-        <meta name= "viewport" content= "width=device-width, initial-scale=1.0">
-        <title>Pindorama Pets - Veterinária</title>
-
-        <!--ícone da aba-->
-        <link rel= "icon" href= "./imagens/Logo.svg">
-        
-        <!--Importação da fonte poppins-->
-        <link rel= "preconnect" href= "https://fonts.googleapis.com">
-        <link rel= "preconnect" href= "https://fonts.gstatic.com" crossorigin>
-        <link href= "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;
-        1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel= "stylesheet">
-        
-        <!--Arquivo de estilo externo-->
-        <link rel="stylesheet" href= "style.css">
-
-    </head>
-
-    <body>
-        <!--MENU-->
-        <header>
-            <div class = "container header-container">
-                <div class ="logo">
-                <img src = "./imagens/LogoCompleta.svg" alt = "Logo Pindorama Pets">
-                    <span>PINDORAMA PETS</span>
-                </div>
-                
-                <!--Menu principal-->
-                <nav class= "menu-principal">
-                    <ul>
-                        <li><a href= "#inicio">Início</a></li>
-                        <li><a href= "#serviços">Serviços</a></li>
-                        <li><a href= "#sobre">Sobre nós</a></li>
-                        <li><a href= "#contato">Contato</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        
-        <!--Conteúdo Principal-->
-        <main>
-
-            <!--Seçao Princial-->
-            <section id = "inicio">
-                <div class= "container">
-                    <div class= "banner-central" >
-                        <h1>Cuidando do Seu Pet com Profissionalismo e Carinho</h1>>
-                        <a href= "#contato" class= "botao-banner">Entre em contato</a>
-                    </div>
-
-                    <div class = "banner-central-imagens">
-                        <!--Imagem dos pets-->
-                        <img src="imagem/banner-central.png" alt="Grupo de pets">
-
-                    </div>
-                </div>
-            </section>
-           
-            <!--Camapanha-->
-           <section id= "campanha">
-                <div class= "carrossel-banner-container">
-                    <div class="carrossel-banner-trilho">
-                        <!-- Colocar as 3 bolinhas no final conforme o slide-->
-                        <div class= "slide banner-1">
-                            </div>
-                            <div class="slide banner-2"></div>
-                            <div class="slide banner-3"></div>
-
-                        </div>
-                    </div>
-            </section> 
-            
-            <!--Sobre nós-->
-            <section id="sobre">
-                <div class= "container-menor">
-                    <img src = "./imagens/LogoCompleta.svg" alt = "Logo Pindorama Pets">
-                </div class= "texto- sobre">
-                <h2>Quem somos?</h2>
-                <p>Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe dedicada e instalações modernas. Buscamos garantir saúde e conforto em cada atendimento. Cuidamos do seu animalzinho como se fosse nosso!</p>
-            </div>
-        </div>
-    </section>
+    <!-- Ícone da aba -->
+    <link rel="icon" href="./imagens/Logo.svg">
     
-    <!--Serviços-->
-    <section id="serviços">
-        <div class="container-menor">
-            <h2>Nossos serviços</h2>
-
-            <article class="servico">
-            <div class="servico-imagem">
-                <img src="imagem/servico-01.png" alt="Veterinária examinando gato">
-                </div>
-                <div class="servico-texto">
-                    <p>Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção aos detalhes, garantindo o melhor cuidado para o seu pet.</p>
-                </div>
-            </article>
+    <!-- Importação da fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Arquivo de estilo externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MENU -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="./imagens/LogoCompleta.svg" alt="Logo Pindorama Pets">
+                <span>PINDORAMA PETS</span>
+            </div>
             
-            <article class="servico layout-reverso">
-                    <div class="servico-texto">
-                        <p>Nossa equipe é experiente e atualizada, oferecendo diagnósticos precisos e tratamentos eficazes.</p>
-                        </div>
-                        <div class="servico-imagem">
-                            <img src="imagem/servico 2.png" alt="Cachorro sendo atendido">
-                            </div>
-                    </article>
+            <!-- Menu principal -->
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- Seção principal / Banner -->
+        <section id="inicio">
+            <div class="banner">
+                <h1>Cuidando do Seu Pet com Profissionalismo e Carinho</h1>
+                <a href="#contato" class="botao-banner">Entre em contato</a>
+                <div class="banner-imagens">
+                    <img src="imagem/banner-central.png" alt="Grupo de pets">
                 </div>
-            </section>
-
-            <!--Profissionais-->
-            <section id="profissionais">
-                <div class="container">
-                    <h2>Nossos profissionais</h2>
-                    <div class="grid-profissionais">
-                            
-                        <!--Profissional 1-->
-                    <div class= "card-profissional">
-                        <img src="imagem/medico1.png" alt="Veterinário 1">
-                        <h3>Carlos de Souza</h3>
-                        <p>Cirurgia Veterinária</p>
-                        </div>
-                            <!--Profissional 2-->
-                        <div class= "card-profissional">
-                            <img src="imagem/medico2.png" alt="Veterinário 2">
-                            <h3>João Paulo</h3>
-                            <p>Dermatologia Veterinária</p>
-                        </div>
-                        <!--Profissional 3-->
-                        <div class= "card-profissional">
-                            <img src="imagem/medico3.png" alt="Veterinário 3">
-                            <h3>José da Silva</h3>
-                            <p>Patologia</p>
-                        </div>
-                        <!--Profissional 4-->
-                        <div class="=card-profissional">
-                            <img src="imagem/medico4.png" alt="Veterinário 4">
-                            <h3> Lucas Nunes</h3>
-                            <p>Anestesiologia</p>
-                    </div>
-                 </div>
             </div>
         </section>
-            
-        <!--Avaliações-->
-        <section id="avaliacoes">
-                <div class="container">
-                    <div class="carrossel-avaliacao-container">
-                        <div class= "carrossel-avaliacao-trilho">
-                            <!--Usuário 1-->
-                            <article class = "avaliacao">
-                                <div class="usuario">
-                                    <img src="imagem/usuario 1.png" alt="Carlos Alberto">
-                                    <h3>Carlos Alberto</h3>
-                                    <p>⭐⭐⭐⭐⭐</p>
-                                    </div>
-                                <blockquote>Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet.</blockquote>
-                            </article>
-                            <!--Usuário 2-->
-                            <article class = "avaliacao">
-                                <div class="usuario">
-                                    <img src="imagem/usuario 2.png" alt="Neymar Jr">
-                                    <h3>Neymar Jr</h3>
-                                    <p>⭐⭐⭐⭐⭐</p>
-                                </div>
-                                <blockquote>Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e atenciosos.</blockquote>
-                            </article>
-                            <!--Usuario 3-->
-                            <article class = "avaliacao">
-                                <div class="usuario">
-                                    <img src="imagem/usuario 3.png" alt="Jossana Silva">
-                                    <p>⭐⭐⭐⭐⭐</p>
-                                <blockquote>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza.</blockquote>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-
-            </section id = "contato">
-                <div class="container-menor">
-                    <h2>Entre em contato</h2>
-                    <div class="div-contato">
-                        <div class="contato-info">
-                            <h3>Localização</h3>
-                            <p>Rua - Fulana de tal, 9999<br>CEP 99999-999<br>Pindorama/SP</p>
-                            <img src="imagem/mapa 1.png" alt="Mapa Pindorama">
-                            <p><strong>(99) 99999-9999</strong></p>
-                            <p>@PindoramaClinica</p>
-                        </div>
-
-                        <div class="contato-form">
-                            <form>
-                                <input type="text" placeholder="Nome">
-                                <input type="text" placeholder="Sobrenome">
-                                <input type="email" placeholder="E-mail">
-                                <textarea placeholder="Mensagem"></textarea>
-                                <button type="submit">Enviar</button>
-                               </form>
-                        </div>
-                    </div>
-                </div>
-            <section>
-        </main>
+       
+        <!-- Sobre nós -->
+        <section id="sobre">
+            <h2>Quem somos?</h2>
+            <p>Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe dedicada e instalações modernas. Buscamos garantir saúde e conforto em cada atendimento. Cuidamos do seu animalzinho como se fosse nosso!</p>
+        </section>
         
-        <!--Rodapé-->
-        <footer>
-            <div class ="container footer-grid">
-                <div class = "footer-coluna">
-                    <img src="imagem/logo(1).png" alt="Logo">
+        <!-- Serviços -->
+        <section id="servicos">
+            <h2>Nossos serviços</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="imagem/servico-01.png" alt="Veterinária examinando gato">
+                    <p>Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção aos detalhes, garantindo o melhor cuidado para o seu pet.</p>
                 </div>
-                <div class = "footer-coluna">
-                    <h4>Nossos serviços</h4>
-                    <ul>
-                        <li>Programa de adoção</li>
-                        <li>Consulta veterinária</li>
-                        <li>Diagnósticos</li>
-                    </ul>
+                
+                <div class="card">
+                    <img src="imagem/servico 2.png" alt="Cachorro sendo atendido">
+                    <p>Nossa equipe é experiente e atualizada, oferecendo diagnósticos precisos e tratamentos eficazes.</p>
                 </div>
-                <div class = "footer-coluna">
-                    <h4>Institucional</h4>
+            </div>
+        </section>
+
+        <!-- Profissionais -->
+        <section id="profissionais">
+            <h2>Nossos profissionais</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="imagem/medico1.png" alt="Veterinário 1">
+                    <h3>Carlos de Souza</h3>
+                    <p>Cirurgia Veterinária</p>
+                </div>
+                <div class="card">
+                    <img src="imagem/medico2.png" alt="Veterinário 2">
+                    <h3>João Paulo</h3>
+                    <p>Dermatologia Veterinária</p>
+                </div>
+                <div class="card">
+                    <img src="imagem/medico3.png" alt="Veterinário 3">
+                    <h3>José da Silva</h3>
+                    <p>Patologia</p>
+                </div>
+                <div class="card">
+                    <img src="imagem/medico4.png" alt="Veterinário 4">
+                    <h3>Lucas Nunes</h3>
+                    <p>Anestesiologia</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Avaliações -->
+        <section id="avaliacoes">
+            <h2>Avaliações dos clientes</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="usuario">
+                        <img src="imagem/usuario 1.png" alt="Carlos Alberto">
+                        <h3>Carlos Alberto</h3>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <blockquote>Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet.</blockquote>
+                </div>
+                
+                <div class="card">
+                    <div class="usuario">
+                        <img src="imagem/usuario 2.png" alt="Neymar Jr">
+                        <h3>Neymar Jr</h3>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <blockquote>Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e atenciosos.</blockquote>
+                </div>
+                
+                <div class="card">
+                    <div class="usuario">
+                        <img src="imagem/usuario 3.png" alt="Jossana Silva">
+                        <h3>Jossana Silva</h3>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <blockquote>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza.</blockquote>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contato -->
+        <section id="contato">
+            <h2>Entre em contato</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Localização</h3>
+                    <p>Rua - Fulana de tal, 9999<br>CEP 99999-999<br>Pindorama/SP</p>
+                    <img src="imagem/mapa 1.png" alt="Mapa Pindorama">
+                    <p><strong>(99) 99999-9999</strong></p>
+                    <p>@PindoramaClinica</p>
+                </div>
+                <div class="card">
+                    <form>
+                        <input type="text" placeholder="Nome" required>
+                        <input type="text" placeholder="Sobrenome" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <textarea placeholder="Mensagem" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="cards">
+            <div class="card">
+                <img src="imagem/logo(1).png" alt="Logo">
+            </div>
+            <div class="card">
+                <h4>Nossos serviços</h4>
+                <ul>
+                    <li>Programa de adoção</li>
+                    <li>Consulta veterinária</li>
+                    <li>Diagnósticos</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Institucional</h4>
                 <ul>
                     <li>Sobre nós</li>
                     <li>Termos de compromisso</li>
                     <li>Nossos serviços</li>
                 </ul>
             </div>
-                <div class = "footer-coluna">
-                   <h4>Nossos contatos</h4>
+            <div class="card">
+                <h4>Nossos contatos</h4>
                 <ul>
                     <li>@PindoramaClinica</li>
                     <li>(99) 99999-9999</li>
@@ -236,9 +187,9 @@
                 </ul>
             </div>
         </div>
-            <div class = "copyright">
-                <p>PINDORAMA CLÍNICA VETERINÁRIA 2024 - TODOS OS DIREITOS RESERVADOS</p>
-            </div>
-        </footer>
-    </body>
+        <div class="copyright">
+            <p>PINDORAMA CLÍNICA VETERINÁRIA 2024 - TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
 </html>
