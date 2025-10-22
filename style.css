@@ -7,13 +7,14 @@
   --dark-color: #063643;     /* rodapé, textos escuros */
   --text-color: #063643;     /* textos principais */
   --light-background: #E2F5FA; /*fundos claros: profissionais, avaliações, contato, banner*/
+
+  --font-primary: 'Poppins', sans-serif;
 }
 
 /* RESET E CONFIGURAÇÕES BASE */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -49,7 +50,6 @@ header {
   background-color: var(--light-color);
   display: flex;
   justify-content: center;
-  align-items: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -64,26 +64,36 @@ header {
   
 }
 
-.logo{
+.nav-links ul{
 
-  display: flex;
-  align-items: center;
-
-}
-
-.menu-principal{
-
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-}
-
-.item{
-  
-  display: inline-block;
+  width: 100%;
   list-style: none;
-  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.nav-links li{
+
+  height: 140px;
+
+}
+
+.nav-links :is(a, span){
+
+  height: 100%;
+  padding: 0 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--dark-color);
+
+}
+
+.nav-links a:hover{
+
+
 
 }
 
@@ -213,8 +223,8 @@ button[type="submit"]:hover {
 
 /* ====== RODAPÉ ====== */
 footer {
-  background-color: #004d61;
-  color: white;
+  background-color: var(--dark-color);
+  color: var(--light-color);
   text-align: center;
   padding: 20px;
   margin-top: 40px;
