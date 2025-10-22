@@ -60,14 +60,6 @@ header {
   height: 110px;
 }
 
-.header-container{
-
-  display: flex;
-  align-items: center;  
-  height: 100%;
-  
-}
-
 .nav-div{
 
   display: flex;
@@ -77,7 +69,7 @@ header {
 
 .logoImagem{
 
-  height: 70px;
+  height: 65px;
   width: auto;
   margin-right: 12px;
 
