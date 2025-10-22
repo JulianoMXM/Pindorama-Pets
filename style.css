@@ -1,12 +1,13 @@
 /*  VARIÁVEIS E CONFIGURAÇÕES GERAIS  */
 :root {
   /* Cores CORRETAS */
-  --primary-color: #063643; /* cores principais: títulos, destaques, botões */
-  --accent-color: #0f637A;  /* destaques de atenção: botões, bordas, ícones */
-  --light-color: #F8F8FF;   /* fundos claros: seções, cards */
-  --dark-color: #063643;     /* rodapé, textos escuros */
-  --text-color: #063643;     /* textos principais */
-  --light-background: #E2F5FA; /*fundos claros: profissionais, avaliações, contato, banner*/
+  --primary-color: #063643;     /* cores principais: títulos, destaques, botões */
+  --accent-color: #0f637A;      /* destaques de atenção: botões, bordas, ícones */
+  --light-color: #F8F8FF;       /* fundos claros: seções, cards */
+  --dark-color: #063643;        /* rodapé, textos escuros */
+  --text-color: #063643;        /* textos principais */
+  --light-background: #E2F5FA;  /*fundos claros: profissionais, avaliações, contato, banner*/
+  --nav-link-hover: #C0DEEA;    /*hover botao nav*/
 
   --font-primary: 'Poppins', sans-serif;
 }
@@ -23,9 +24,11 @@ html {
 
 .container{
 
-  display: flex;
   width: 100%;
   max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
 
 }
 
@@ -54,62 +57,77 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  height: 110px;
 }
 
 .header-container{
 
   display: flex;
-  justify-content: space-around;
   align-items: center;  
+  height: 100%;
   
+}
+
+.nav-div{
+
+  display: flex;
+  align-items: center;
+
+}
+
+.logoImagem{
+
+  height: 70px;
+  width: auto;
+  margin-right: 12px;
+
+}
+
+.nav-div span{
+
+  font-weight: 700;
+  font-size: 14px;
+
+}
+
+.nav-links{
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+
 }
 
 .nav-links ul{
 
-  width: 100%;
   list-style: none;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 
 }
 
 .nav-links li{
 
-  height: 140px;
+  margin-left: 15px;
 
 }
 
-.nav-links :is(a, span){
+.nav-links a{
 
   height: 100%;
-  padding: 0 15px;
   text-decoration: none;
-  display: flex;
-  align-items: center;
   color: var(--dark-color);
+  padding: 4px 4px;
+  border-radius: 6px;
+  transition: background-color 0.5s ease;
 
 }
 
 .nav-links a:hover{
 
+  background-color: var(--nav-link-hover);
 
-
-}
-
-.menu-principal {
-  display: flex;
-}
-
-.menu-principal a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.menu-principal a:hover {
-  color: var(--accent-color);
 }
 
 /*  BOTÕES DO CABEÇALHO  */
