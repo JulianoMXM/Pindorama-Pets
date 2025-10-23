@@ -2,7 +2,7 @@
 :root {
   /* Cores CORRETAS */
   --primary-color: #063643;     /* cores principais: títulos, destaques, botões */
-  --accent-color: #0f637A;      /* destaques de atenção: botões, bordas, ícones */
+  --accent-color: #0F637A;      /* destaques de atenção: botões, bordas, ícones */
   --light-color: #F8F8FF;       /* fundos claros: seções, cards */
   --dark-color: #063643;        /* rodapé, textos escuros */
   --text-color: #063643;        /* textos principais */
@@ -130,6 +130,7 @@ header {
 }
 
 .banner-central {
+  position: relative;
   height: 450px;
   box-sizing: border-box;
   padding: 55px 75px;
@@ -138,10 +139,16 @@ header {
   box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
 }
 
-.banner-central-texto h1{
-
-  font-family: var(--font-primary);
-
+.botao-banner{
+  text-decoration: none;
+  color: var(--light-color);  
+  background-color: var(--accent-color);
+  border-radius: 8px;
+  padding: 20px 20px;
+  position: absolute;
+  top: 202px;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 /* ====== SERVIÇOS ====== */
