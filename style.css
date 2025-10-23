@@ -162,35 +162,6 @@ header {
   max-width: 100%;
 
 }
-#pets-1, #pets-2, #pets-3, #pets-detail{
-
-  position: absolute;
-
-}
-
-#pets-1{
-
-  top: 235px;
-  left: 880px;
-  z-index: 3;
-
-}
-
-#pets-2{
-
-  top: 151px;
-  left: 567px;
-  z-index: 2;
-
-}
-
-#pets-3{
-
-  top: 251px;
-  left: 383px;
-  bottom: 37px;
-
-}
 
 #pets-detail{
 
