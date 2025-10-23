@@ -151,6 +151,43 @@ header {
   font-weight: 700;
 }
 
+.banner-central-imagens{
+
+  max-width: 100%;
+
+}
+#pets-1, #pets-2, #pets-3{
+
+  position: absolute;
+  height: auto;
+
+}
+
+#pets-1{
+
+  width: 90%;
+  top: 235px;
+  left: 880px;
+  z-index: 3;
+
+}
+
+#pets-2{
+
+  top: 151px;
+  left: 567px;
+  z-index: 2;
+
+}
+
+#pets-3{
+
+  top: 251px;
+  left: 383px;
+  bottom: 37px;
+
+}
+
 /* ====== SERVIÇOS ====== */
 #servicos {
   padding: 60px 20px;
