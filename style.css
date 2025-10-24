@@ -197,6 +197,25 @@ header {
 
 }
 
+/* ====== CAMPANHA ====== */
+
+.botao{
+
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+
+.carrossel-banners{
+
+  background-color: var(--light-color);
+  height: 450px;
+  width: 10px;
+
+}
+
 /* ====== SERVIÇOS ====== */
 #servicos {
   padding: 60px 20px;
