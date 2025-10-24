@@ -1,15 +1,17 @@
 /*  VARIÁVEIS E CONFIGURAÇÕES GERAIS  */
 :root {
   /* Cores CORRETAS */
-  --primary-color: #063643;       /* cores principais: títulos, destaques, botões */
-  --accent-color: #0F637A;        /* destaques de atenção: botões, bordas, ícones */
-  --light-color: #F8F8FF;         /* fundos claros: seções, cards */
-  --dark-color: #063643;          /* rodapé, textos escuros */
-  --text-color: #063643;          /* textos principais */
-  --light-background: #E2F5FA;    /*fundos claros: profissionais, avaliações, contato, banner*/
-  --nav-link-hover: #C0DEEA;      /*hover botao nav*/
-  --banner-button-hover: #7CCBE0; /*hover botao banner*/
-  --campanha-1-background: #63B3C9; /*background do primeiro banner da campanha*/
+  --primary-color: #063643;             /* cores principais: títulos, destaques, botões */
+  --accent-color: #0F637A;              /* destaques de atenção: botões, bordas, ícones */
+  --light-color: #F8F8FF;               /* fundos claros: seções, cards */
+  --dark-color: #063643;                /* rodapé, textos escuros */
+  --text-color: #063643;                /* textos principais */
+  --white-background: #E2F5FA;          /*fundos claros: profissionais, avaliações, contato, banner*/
+  --nav-link-hover: #C0DEEA;            /*hover botao nav*/
+  --banner-button-hover: #7CCBE0;       /*hover botao banner*/
+  --blue-background: #63B3C9;           /*background do primeiro banner da campanha e do serviço*/
+
+  --blue-light-background: #89C5D5;     /*background da parte de serviço e quem somos*/
 
   --font-primary: 'Poppins', sans-serif;
 }
@@ -47,7 +49,7 @@ html {
 body {
   font-family: var(--font-primary);
   color: var(--text-color);
-  background-color: var(--light-background);
+  background-color: var(--white-background);
 }
 
 /*  CABEÇALHO  */
@@ -247,7 +249,7 @@ header {
 
 .banner-1{
 
-  background-color: var(--campanha-1-background);
+  background-color: var(--blue-background);
 
 }
 
@@ -315,6 +317,70 @@ header {
   font-family: var(--font-primary);
 
 }
+
+/* ====== QUEM SOMOS ====== */
+
+#quem-somos{
+
+  background-color: var(--blue-light-background);
+  background-image: url(imagens/servicos/fundo-animais.svg);
+
+}
+
+#div-quem-somos{
+
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+#quem-somos-imagem{
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+#quem-somos-imagem #img-logo{
+
+  height: 115px;
+  width: auto;
+
+}
+
+#quem-somos-imagem #img-nome{
+
+  padding-top: 15px;
+  height: 55px;
+  width: auto;
+
+}
+
+#quem-somos-texto{
+
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#quem-somos-texto span{
+
+  font-size: 24px;
+  font-weight: 700;
+
+}
+
+#quem-somos-texto p{
+
+  width: 700px;
+  font-size: 20px;
+  font-weight: 400;
+
+}
+
 
 /* ====== SERVIÇOS ====== */
 #servicos {
