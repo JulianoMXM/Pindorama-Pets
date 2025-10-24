@@ -38,17 +38,38 @@
     
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
-        <!-- Seção principal / Banner -->
-        <section id="inicio">
-            <div class="banner">
-                <h1>Cuidando do Seu Pet com Profissionalismo e Carinho</h1>
-                <a href="#contato" class="botao-banner">Entre em contato</a>
-                <div class="banner-imagens">
-                    <img src="./imagens/banner-central.png" alt="Grupo de pets">
-                </div>
-            </div>
-        </section>
-       
+        <!-- Banner 1 - SEM setas, SEM bolinhas -->
+<section id="inicio">
+    <div class="banner" style="background: #E2F5FA;">
+        <div class="banner-imagens">
+            <img src="./imagens/banner-central.png" alt="Cuidando do Seu Pet com Profissionalismo e Carinho" style="width: 1180px; height: 450px; border-radius: 8px;">
+        </div>
+    </div>
+</section>
+
+<!-- Banner 2 - COM setas especiais, COM bolinhas -->
+<section id="campanha-vacinacao">
+    <div class="banner" style="background: #E2F5FA;">
+        <button class="banner-seta banner-seta-esquerda">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18L9 12L15 6" stroke="#063643" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="banner-imagens">
+            <img src="./imagens/banner.png" alt="Campanha de vacinação" style="width: 1094px; height: 300px; border-radius: 8px;">
+        </div>
+        <button class="banner-seta banner-seta-direita">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="#063643" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="banner-paginacao">
+            <span class="bolinha ativa"></span>
+            <span class="bolinha"></span>
+            <span class="bolinha"></span>
+        </div>
+    </div>
+</section>
         <!-- Sobre nós -->
         <section id="sobre">
             <h2>Quem somos?</h2>
