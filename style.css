@@ -1,14 +1,12 @@
 /*  VARIÁVEIS E CONFIGURAÇÕES GERAIS  */
 :root {
-  /* Cores CORRETAS */
-  --primary-color: #063643;     /* cores principais: títulos, destaques, botões */
-  --accent-color: #0f637A;      /* destaques de atenção: botões, bordas, ícones */
-  --light-color: #F8F8FF;       /* fundos claros: seções, cards */
-  --dark-color: #063643;        /* rodapé, textos escuros */
-  --text-color: #063643;        /* textos principais */
-  --light-background: #E2F5FA;  /*fundos claros: profissionais, avaliações, contato, banner*/
-  --nav-link-hover: #C0DEEA;    /*hover botao nav*/
-
+  --primary-color: #063643;
+  --accent-color: #0f637A;
+  --light-color: #F8F8FF;
+  --dark-color: #063643;
+  --text-color: #063643;
+  --light-background: #E2F5FA;
+  --nav-link-hover: #C0DEEA;
   --font-primary: 'Poppins', sans-serif;
 }
 
@@ -16,333 +14,551 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.container{
-
+.container {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 40px;
-  box-sizing: border-box;
-
-}
-
-.container-menor{
-
-  display: flex;
-  width: 100%;
-  max-width: 1020px;
-
 }
 
 body {
   font-family: var(--font-primary);
-  font-size: var(--text-base);
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--light-color);
 }
 
-/*  CABEÇALHO  */
+/* CABEÇALHO CORRIGIDO */
 header {
   background-color: var(--light-color);
-  display: flex;
-  justify-content: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
   height: 110px;
-}
-
-.header-container{
-
-  display: flex;
-  align-items: center;  
-  height: 100%;
-  
-}
-
-.nav-div{
-
   display: flex;
   align-items: center;
-
 }
 
-.logoImagem{
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
   height: 70px;
   width: auto;
-  margin-right: 12px;
-
 }
 
-.nav-div span{
-
+.logo span {
   font-weight: 700;
   font-size: 14px;
-
+  color: var(--dark-color);
 }
 
-.nav-links{
-
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
-
-}
-
-.nav-links ul{
-
+/* MENU PRINCIPAL CORRIGIDO */
+.menu-principal ul {
   list-style: none;
   display: flex;
-  align-items: center;
-
+  gap: 30px;
 }
 
-.nav-links li{
-
-  margin-left: 15px;
-
-}
-
-.nav-links a{
-
-  height: 100%;
+.menu-principal a {
   text-decoration: none;
   color: var(--dark-color);
-  padding: 4px 4px;
+  font-weight: 500;
+  padding: 8px 16px;
   border-radius: 6px;
-  transition: background-color 0.5s ease;
-
+  transition: background-color 0.3s ease;
 }
 
-.nav-links a:hover{
-
+.menu-principal a:hover {
   background-color: var(--nav-link-hover);
-
 }
 
-/*  BOTÕES DO CABEÇALHO  */
-.menu-btn, .tema-btn {
-  background: none;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
+/* BANNER 1 - PRIMEIRO BANNER */
+#inicio .banner {
+    position: relative;
+    text-align: center;
+    padding: 80px 0;
+    background: #E2F5FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px; /* Altura total da seção */
 }
 
-/*  BANNER  */
-.banner {
-  text-align: center;
-  background-color: var(--light-color);
-  padding: 80px 20px;
+#inicio .banner-imagens {
+    position: relative;
 }
 
-.banner h2 {
-    font-size: 28px;
-  margin-bottom: 10px;
-  color: var(--primary-color);
+#inicio .banner-imagens img {
+    width: 1180px;
+    height: 450px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
 
-.banner button {
-  background-color: var(--accent-color);
-  color: var(--light-color);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+/* BANNER 2 - SEGUNDO BANNER (COM SETAS E BOLINHAS) */
+#campanha-vacinacao .banner {
+    position: relative;
+    text-align: center;
+    padding: 60px 0;
+    background: #E2F5FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px; /* Altura total da seção */
 }
 
-.banner button:hover {
-  background-color: var(--primary-color);
+#campanha-vacinacao .banner-imagens {
+    position: relative;
 }
 
-
-/*  SERVIÇOS  */
-#servicos {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: var(--light-color);
+#campanha-vacinacao .banner-imagens img {
+    width: 1094px;
+    height: 300px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
 
-#servicos h2 {
-  color: var(--primary-color);
+/* SETAS ESPECIAIS - Só para banner 2 */
+#campanha-vacinacao .banner-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 2px solid #063643;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 30px;
+#campanha-vacinacao .banner-seta-esquerda {
+    left: 100px;
 }
 
-.card {
-  background-color: var(--light-color);
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+#campanha-vacinacao .banner-seta-direita {
+    right: 100px;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+#campanha-vacinacao .banner-seta:hover {
+    background: #E2F5FA;
+    transform: translateY(-50%) scale(1.1);
 }
 
-.card img {
-  width: 80px;
-  margin-bottom: 10px;
+#campanha-vacinacao .banner-seta svg {
+    width: 24px;
+    height: 24px;
 }
 
-.card h3 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
+/* Bolinhas só no banner 2 */
+#campanha-vacinacao .banner-paginacao {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
 }
 
-.card p {
-  color: var(--text-color);
-  font-size: 0.95rem;
+#campanha-vacinacao .bolinha {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/*  SOBRE  */
+#campanha-vacinacao .bolinha.ativa {
+    background: white;
+    transform: scale(1.2);
+}
+
+#campanha-vacinacao .bolinha:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* Remove qualquer seta do banner 1 */
+#inicio .banner-seta,
+#inicio .banner-paginacao {
+    display: none;
+}
+
+/* RESPONSIVIDADE BANNERS */
+@media (max-width: 1200px) {
+    #inicio .banner-imagens img {
+        width: 90%;
+        max-width: 1180px;
+        height: auto;
+        max-height: 450px;
+    }
+    
+    #campanha-vacinacao .banner-imagens img {
+        width: 90%;
+        max-width: 1094px;
+        height: auto;
+        max-height: 300px;
+    }
+    
+    #campanha-vacinacao .banner-seta-esquerda {
+        left: 20px;
+    }
+    
+    #campanha-vacinacao .banner-seta-direita {
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #inicio .banner {
+        height: 400px;
+        padding: 40px 0;
+    }
+    
+    #campanha-vacinacao .banner {
+        height: 300px;
+        padding: 30px 0;
+    }
+    
+    #campanha-vacinacao .banner-seta {
+        width: 36px;
+        height: 36px;
+    }
+    
+    #campanha-vacinacao .banner-seta svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* SOBRE NÓS */
 #sobre {
   background-color: var(--light-color);
-  padding: 60px 20px;
   text-align: center;
-}
-
-#sobre h2 {
-  color: var(--primary-color);
-  margin-bottom: 20px;
 }
 
 #sobre p {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* SERVIÇOS */
+#servicos {
+  background-color: var(--light-background);
+}
+
+#servicos .cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#servicos .card {
+  background: var(--light-color);
+  border-radius: 15px;
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#servicos .card img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#servicos .card p {
+  font-size: 1rem;
   line-height: 1.6;
-  color: var(--dark-color);
+}
+
+/* PROFISSIONAIS */
+#profissionais {
+  background-color: var(--light-color);
+}
+
+#profissionais .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#profissionais .card {
+  background: var(--light-color);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+#profissionais .card:hover {
+  transform: translateY(-5px);
+}
+
+#profissionais .card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid var(--accent-color);
+}
+
+#profissionais .card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#profissionais .card p {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* AVALIAÇÕES */
+#avaliacoes {
+  background-color: var(--light-background);
+}
+
+#avaliacoes .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#avaliacoes .card {
+  background: var(--light-color);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.usuario img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.usuario h3 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.usuario p {
+  color: #FFD700;
+  font-size: 1.2rem;
+}
+
+blockquote {
+  font-style: italic;
+  color: var(--text-color);
+  border-left: 3px solid var(--accent-color);
+  padding-left: 15px;
+  line-height: 1.6;
 }
 
 /* CONTATO */
 #contato {
-  padding: 60px 20px;
-  text-align: center;
   background-color: var(--light-color);
 }
 
-#contato h2 {
+#contato .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+#contato .card {
+  background: var(--light-color);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#contato .card h3 {
   color: var(--primary-color);
   margin-bottom: 20px;
+  text-align: center;
 }
 
-form {
+#contato .card img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+#contato form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  gap: 15px;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
+#contato input,
+#contato textarea {
+  padding: 12px;
   border: 1px solid var(--accent-color);
+  border-radius: 8px;
   font-family: inherit;
   font-size: 1rem;
-  color: var(--text-color);
-  background-color: var(--light-color);
+  background: var(--light-color);
 }
 
-textarea {
+#contato textarea {
+  min-height: 120px;
   resize: vertical;
-  min-height: 100px;
 }
 
-button[type="submit"] {
+#contato button {
   background-color: var(--accent-color);
   color: var(--light-color);
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+#contato button:hover {
   background-color: var(--primary-color);
 }
 
-/* ====== RODAPÉ ====== */
+/* RODAPÉ CORRIGIDO */
 footer {
   background-color: var(--dark-color);
   color: var(--light-color);
+  padding: 50px 20px 20px;
+}
+
+footer .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+footer .card {
+  text-align: left;
+}
+
+footer .card img {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+footer h4 {
+  color: var(--light-color);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.copyright {
+  border-top: 1px solid #555;
+  padding-top: 20px;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  color: #ccc;
   font-size: 0.9rem;
 }
 
-/* ====== ANIMAÇÃO DAS IMAGENS ====== */
-.pet-img {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.pet-img.mostrar {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ====== RESPONSIVIDADE (CELULAR) ====== */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
   header {
-    flex-wrap: wrap;
-    padding: 15px 20px;
+    height: auto;
+    padding: 15px 0;
   }
-
-  .nav-links {
-    display: none;
+  
+  .header-container {
     flex-direction: column;
-    background-color: var(--light-color);
-    width: 100%;
-    padding: 10px;
+    gap: 15px;
   }
-
-  .nav-links.ativo {
-    display: flex;
+  
+  .menu-principal ul {
+    gap: 15px;
   }
-
-  .menu-btn {
-    display: block;
+  
+  .banner h1 {
+    font-size: 2rem;
   }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
+  
+  #contato .cards {
+    grid-template-columns: 1fr;
   }
-
-  .card {
-    width: 90%;
-    max-width: 300px;
+  
+  section {
+    padding: 60px 20px;
   }
-
-  form {
-    width: 90%;
+  
+  footer .cards {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 }
-
