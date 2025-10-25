@@ -150,7 +150,7 @@ header {
 #banner-central h1{
 
   color: var(--text-color);
-  font-size: clamp(1rem, 3dvw, 2rem);
+  font-size: clamp(1rem, 2.5dvw, 1.75rem);
 
 }
 
@@ -203,6 +203,21 @@ header {
 
 /* ====== CAMPANHA ====== */
 
+#campanha-coluna{
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+#campanha-linha{
+
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
 #carrossel-banners{
 
   height: 300px;
@@ -213,25 +228,12 @@ header {
 
 }
 
-#campanha-coluna{
-
-  display: flex;
-  flex-direction: column;
-  max-width: 1094px;
-
-}
-
-#campanha-linha{
-
-  display: flex;
-  justify-content: center;
-
-}
-
 .slide{
 
   width: 100%;
   height: 100%;
+
+  border-radius: 8px;
 
   position: absolute;
 
@@ -240,28 +242,36 @@ header {
 
 }
 
+.slide img{
+
+  position: absolute;
+
+}
+
+.slide span{
+
+  position: absolute;
+
+}
+
+.slide #titulo{
+
+  font-size: clamp(1rem, 2.5dvw, 1.75rem);
+  font-weight: 700;
+
+}
+
+.slide #texto{
+
+  font-size: clamp(1rem, 1.75dvw, 1.25rem);
+  font-weight: 500;
+
+}
+
 .slide.active{
 
   opacity: 1;
   z-index: 10;
-
-}
-
-.banner-1{
-
-  background-color: var(--blue-background);
-
-}
-
-.banner-2{
-
-  background-color: var(--dark-color);
-
-}
-
-.banner-3{
-
-  background-color: var(--light-color);
 
 }
 
@@ -274,31 +284,35 @@ header {
 
 }
 
+.botao-campanha{
+
+  width: 21px;
+  height: 20px;
+  background-image: url(imagens/campanha/point.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: background-image 0.4s ease;
+
+}
+
+.botao-campanha.active{
+
+  background-image: url(imagens/campanha/point-blue.svg);
+  background-repeat: no-repeat;
+
+}
+
 #arrow-back, #arrow-next{
 
   height: 40px;
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-
-}
-
-#arrow-next{
-
-  right: 0;
-
-}
-
-#arrow-back{
-
-  left: 0;
+  width: auto;
 
 }
 
 #botoes-campanha{
 
   display: flex;
-  flex-direction: row;
   align-self: center;
   padding-top: 12px;
   padding-bottom: 25px;
@@ -315,6 +329,160 @@ header {
   color: var(--text-color);
   border-radius: 4px;
   font-family: var(--font-primary);
+  position: absolute;
+
+}
+
+/* ====== BANNER 1 ====== */
+
+.banner-1{
+
+  background-color: var(--blue-background);
+
+}
+
+.banner-1 .saiba-mais{
+
+  top:50%;
+  left:46%;
+
+}
+
+#patinha-1{
+
+  top: 6.5%;
+  left: 2.5%;
+
+}
+
+#patinha-2{
+
+  top: 43%;
+  left: 23%
+
+}
+
+#seringa{
+
+  top: 26.2%;
+  left: 10.6%;
+
+}
+
+#gato-sombra{
+
+  bottom: 1%;
+  right: 10%
+
+}
+
+.banner-1 #titulo{
+
+  left: 46%;
+  top: 7.5%;
+
+}
+
+.banner-1 #texto{
+
+  left: 46.5%;
+  top: 25%;
+  color: var(--accent-color);
+
+}
+
+
+
+/* ====== BANNER 2 ====== */
+
+.banner-2{
+
+  background-color: var(--dark-color);
+  background-image: url(imagens/campanha/banner-2/background-patinha.svg);
+
+}
+
+.banner-2 .saiba-mais{
+
+  bottom: 11%;
+  left: 8.5%;
+
+}
+
+.banner-2 #cachorro{
+
+  position: absolute;
+  bottom: 0;
+  right: 23%
+
+}
+
+.banner-2 #gato-lateral{
+
+  position: absolute;
+  right: 0;
+
+}
+
+.banner-2 #titulo{
+
+  color: #FFFFFF;
+  left: 6%;
+  top: 7%;
+
+}
+
+.banner-2 #texto{
+
+  color: #FAFDFF;
+  font-size: clamp(0.875rem, 1.75dvw, 1.125rem);
+  width: 520px;
+  left: 6.5%;
+  top: 26%;
+
+}
+
+/* ====== BANNER 3 ====== */
+
+.banner-3{
+
+  background-color: var(--light-color);
+
+}
+
+.banner-3 .saiba-mais{
+
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  bottom: 11%;
+  left: 8.7%;
+
+}
+
+.banner-3 #agua{
+
+  right: 0;
+
+}
+
+.banner-3 #gato-banho{
+
+  right: 2.5%;
+
+}
+
+.banner-3 #titulo{
+
+  left: 6%;
+  top: 7%;
+
+}
+
+.banner-3 #texto{
+
+  color: var(--dark-color);
+  left: 6%;
+  top: 25%;
 
 }
 
@@ -334,6 +502,7 @@ header {
   height: 300px;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 
 }
 
@@ -341,6 +510,7 @@ header {
 
   display: flex;
   flex-direction: column;
+  padding-right: 40px;
 
 }
 
@@ -368,7 +538,7 @@ header {
 
 #quem-somos-texto span{
 
-  font-size: 24px;
+  font-size: clamp(1.25rem, 3dvw, 1.5rem);
   font-weight: 700;
 
 }
@@ -376,7 +546,7 @@ header {
 #quem-somos-texto p{
 
   max-width: 700px;
-  font-size: 20px;
+  font-size: clamp(1rem, 1.75dvw, 1.25rem);
   font-weight: 400;
 
 }
@@ -400,6 +570,7 @@ header {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  box-sizing: border-box;
 
 }
 
@@ -408,12 +579,13 @@ header {
   height: 260px;
   width: auto;
   padding-top: 120px;
+  padding-right: 40px;
 
 }
 
 #servicos-1-imagem span{
 
-  font-size: 24px;
+  font-size: clamp(1.25rem, 3dvw, 1.5rem);
   font-weight: 700;
   position: absolute;
   left: 28px;
@@ -423,7 +595,7 @@ header {
 
 #servicos-1 p{
 
-  font-size: 20px;
+  font-size: clamp(1rem, 1.75dvw, 1.25rem);
   font-weight: 400;
   max-width: 620px;
 
@@ -435,6 +607,7 @@ header {
 
   background-color: var(--blue-light-background);
   background-image: url(imagens/servicos/fundo-animais.svg);
+  box-sizing: border-box;
 
 
 }
@@ -443,6 +616,7 @@ header {
 
   height: 260px;
   width: auto;
+  padding-left: 40px;
 
 }
 
@@ -459,7 +633,7 @@ header {
 
 #servicos-2 p{
 
-  font-size: 20px;
+  font-size: clamp(1rem, 1.75dvw, 1.25rem);
   font-weight: 400;
   max-width: 620px;
 
