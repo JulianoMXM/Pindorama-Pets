@@ -9,6 +9,7 @@
   --nav-link-hover: #C0DEEA;            /*hover botao nav*/
   --banner-button-hover: #7CCBE0;       /*hover botao banner*/
   --blue-background: #63B3C9;           /*background do primeiro banner da campanha e do serviço*/
+  --avaliacao-hover: #6BB7CB;           /*botao avaliacao hover*/
 
   --blue-light-background: #89C5D5;     /*background da parte de serviço e quem somos*/
 
@@ -38,7 +39,7 @@ html {
 .container-menor{
 
   width: 100%;
-  max-width: 1060px;
+  max-width: 1080px;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 20px;
@@ -737,30 +738,168 @@ header {
 
 }
 
-/* ====== SOBRE ====== */
-#sobre {
-  background-color: var(--light-color);
-  padding: 60px 20px;
-  text-align: center;
+/* ====== AVALIAÇÃOS ====== */
+
+#avaliacoes{
+
+  padding-top: 100px;
+
 }
 
-#sobre h2 {
-  color: var(--primary-color);
-  margin-bottom: 20px;
+#div-avaliacoes{
+
+  height: 626px;
+  position: relative;
+
 }
 
-#sobre p {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-  color: var(--dark-color);
+#div-avaliacoes h2{
+
+  padding-bottom: 50px;
+
+}
+
+.avaliacao{
+
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  gap: 25px;
+  position: absolute;
+
+  opacity: 0;
+
+}
+
+.avaliacao.active{
+
+  opacity: 1;
+
+}
+
+.pos-2{
+
+  top:36.5%;
+
+}
+
+.pos-3{
+
+  top: 60%;
+
+}
+
+#separacao-1{
+
+  top:35%;
+
+}
+
+#separacao-2{
+
+  top: 58%;
+
+}
+
+.avaliacao h3{
+
+  font-weight: 400;
+  font-size: clamp(0.875rem, 1.75dvw, 1.125rem);
+  
+}
+
+.avaliacao blockquote{
+
+  max-width: 750px;
+
+}
+
+.avaliacao .user{
+
+  height: 80px;
+  width: auto;
+
+}
+
+.separacao{
+
+  width: clamp(450px, 80dvw, 900px);
+  position: absolute;
+
+}
+
+#avaliacao-coluna{
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+#paginas-avaliacao{
+
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  bottom: 0;
+  right: 0;
+  transform: translate(-20%);
+
+}
+
+#pagina-atual-avaliacao{
+
+  font-weight: 700;
+  font-size: 18px;
+
+}
+
+.seta{
+
+  width: 40px;
+  height: 30px;
+  border-radius: 8px;
+  border-width: 1px;
+  background: none;
+  cursor: pointer;
+  background-image: url(imagens/avaliacoes/seta-avaliacao-preta.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0;
+
+}
+
+.seta.active{
+    
+  opacity: 1;
+
+}
+
+.seta:hover{
+
+  background-color: var(--avaliacao-hover);
+
+}
+
+.seta.clicado{
+
+  background-color: var(--dark-color);
+  background-image: url(imagens/avaliacoes/seta-avaliacao-branca.svg);
+
+}
+
+#seta-next{
+
+  transform: rotate(180deg);
+
 }
 
 /* CONTATO */
 #contato {
   padding: 60px 20px;
   text-align: center;
-  background-color: var(--light-color);
 }
 
 #contato h2 {

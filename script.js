@@ -6,17 +6,17 @@ document.addEventListener("DOMContentLoaded", function() {
   const nextButton = document.querySelector("#arrow-next");
   const backButton = document.querySelector("#arrow-back");
 
-  let currentSlideIndex = 0;
+  let slideAtualIndice = 0;
   const totalSlides = slides.length;
 
-  function moveToSlide(targetIndex){
+  function moverParaSlide(slideIndice){
 
-    if(targetIndex >= totalSlides){
-      targetIndex = 0;
+    if(slideIndice >= totalSlides){
+      slideIndice = 0;
     }
 
-    if(targetIndex < 0){
-      targetIndex = totalSlides - 1;
+    if(slideIndice < 0){
+      slideIndice = totalSlides - 1;
     }
 
     slides.forEach(slide => {
@@ -27,54 +27,110 @@ document.addEventListener("DOMContentLoaded", function() {
       ponto.classList.remove("active");
     });
 
-    slides[targetIndex].classList.add("active");
-    pontos[targetIndex].classList.add("active");
+    slides[slideIndice].classList.add("active");
+    pontos[slideIndice].classList.add("active");
 
-    currentSlideIndex = targetIndex;
+    slideAtualIndice = slideIndice;
 
   }
 
   nextButton.addEventListener("click", function() {
-    moveToSlide(currentSlideIndex + 1);
+    moverParaSlide(slideAtualIndice + 1);
   });
   
   backButton.addEventListener("click", function(){
-    moveToSlide(currentSlideIndex - 1);
+    moverParaSlide(slideAtualIndice - 1);
   });
 
   pontos.forEach((ponto, index) => {
 
     ponto.addEventListener("click", function(){
 
-      moveToSlide(index);
+      moverParaSlide(index);
 
     });
 
   });
 
-  moveToSlide(0);
+  moverParaSlide(0);
 
 });
 
-// ========== MENU RESPONSIVO ==========
-const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.querySelector('.nav-links');
+const setas_avaliacao = document.querySelectorAll(".seta");
 
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+// 2. Passa por cada seta na lista
+setas_avaliacao.forEach(seta => {
+
+  // 3. Adiciona um ouvinte de clique a CADA seta
+  seta.addEventListener("click", function() {
+
+      // 4. Adiciona a classe .clicado IMEDIATAMENTE
+      seta.classList.add("clicado");
+
+      // 5. Cria um "timer" para remover a classe
+      setTimeout(function() {
+          // Este código roda DEPOIS de 300ms
+          seta.classList.remove("clicado");
+      }, 300); // 300 milissegundos = 0.3s
+
+  });
+});
+
+const paginasAvaliacao = document.querySelectorAll(".avaliacao");
+
+const nextSeta = document.querySelector("#seta-next");
+const backSeta = document.querySelector("#seta-back");
+
+let paginaAtual = 0;
+const totalPaginas = Math.ceil(paginasAvaliacao.length/3);
+const paginaAtualAvaliacao = document.querySelector("#pagina-atual-avaliacao");
+
+function moverParaAvaliacao(paginaAtualIndice){
+
+  if(paginaAtualIndice === (totalPaginas-1)){
+    nextSeta.classList.remove("active");
+  } else {
+    nextSeta.classList.add("active");
+  }
+  
+  if(paginaAtualIndice === 0){
+    backSeta.classList.remove("active");
+  } else {
+    backSeta.classList.add("active");
+  }
+
+  paginasAvaliacao.forEach(avaliacao => {
+    avaliacao.classList.remove("active");
+  });
+
+  const inicioIndex = paginaAtualIndice * 3;
+        
+  for (let i = inicioIndex; i < inicioIndex + 3; i++) {
+
+      if (paginasAvaliacao[i]) {
+
+          paginasAvaliacao[i].classList.add("active");
+
+      }
+
+  }
+
+  paginaAtual = paginaAtualIndice;
+
+  paginaAtualAvaliacao.textContent = paginaAtualIndice + 1;
+
+}
+
+nextSeta.addEventListener("click", function(){
+
+  moverParaAvaliacao(paginaAtual + 1);
+
+});
+
+backSeta.addEventListener("click", function(){
+
+  moverParaAvaliacao(paginaAtual - 1);
+
 });
 
 
-// ========== BOTÃO DE CONTATO ==========
-const botaoContato = document.getElementById('botaoContato');
-botaoContato.addEventListener('click', () => {
-  document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
-});
-
-// ========== FORMULÁRIO DE CONTATO ==========
-const formContato = document.getElementById('formContato');
-formContato.addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Mensagem enviada com sucesso! 🐾');
-  formContato.reset();
-});
