@@ -375,23 +375,97 @@ header {
 
 #quem-somos-texto p{
 
-  width: 700px;
+  max-width: 700px;
   font-size: 20px;
   font-weight: 400;
 
 }
 
+/* ====== SERVIÇOS 1 ====== */
 
-/* ====== SERVIÇOS ====== */
-#servicos {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: var(--light-color);
+#servicos-1{
+
+  background-color: var(--blue-background);
+  background-image: url(imagens/servicos/fundo-animais.svg);
+  display: flex;
+  flex-direction: row;
+  
 }
 
-#servicos h2 {
-  color: var(--primary-color);
+#div-servicos-1{
+
+  display: flex;
+  flex-direction: row;
+  height: 418px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
 }
+
+#servicos-1-imagem img{
+
+  height: 260px;
+  width: auto;
+  padding-top: 120px;
+
+}
+
+#servicos-1-imagem span{
+
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: 28px;
+  top: 45px
+
+}
+
+#servicos-1 p{
+
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 620px;
+
+}
+
+/* ====== SERVICOS 2 ====== */
+
+#servicos-2{
+
+  background-color: var(--blue-light-background);
+  background-image: url(imagens/servicos/fundo-animais.svg);
+
+
+}
+
+#servicos-2 img{
+
+  height: 260px;
+  width: auto;
+
+}
+
+#div-servicos-2{
+
+  display: flex;
+  flex-direction: row;
+  height: 325px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+}
+
+#servicos-2 p{
+
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 620px;
+
+}
+
+/* =============================== */
 
 .cards {
   display: flex;
