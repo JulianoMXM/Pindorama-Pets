@@ -526,6 +526,7 @@ header {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  position: relative;
 
 }
 
@@ -556,6 +557,8 @@ header {
 
   display: flex;
   flex-direction: column;
+  position: absolute;
+  left: 40%;
   
 }
 
@@ -599,8 +602,8 @@ header {
 
 #servicos-1-imagem img{
 
-  height: 260px;
-  width: auto;
+  width: clamp(160px, 35dvw ,320px);
+  height: auto;
   padding-top: 120px;
   padding-right: 40px;
 
@@ -621,6 +624,8 @@ header {
   font-size: clamp(1rem, 1.75dvw, 1.25rem);
   font-weight: 400;
   max-width: 620px;
+  position: absolute;
+  left: 40%;
 
 }
 
@@ -637,8 +642,8 @@ header {
 
 #servicos-2 img{
 
-  height: 260px;
-  width: auto;
+  width: clamp(160px, 35dvw ,320px);
+  height: auto;
   padding-left: 40px;
 
 }
@@ -662,46 +667,77 @@ header {
 
 }
 
-/* =============================== */
+/* ====== Profissionais ====== */
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 30px;
+#profissionais{
+
+  padding-top: 40px;
+
 }
 
-.card {
+#div-profissionais{
+
   background-color: var(--light-color);
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 8px;
+  height: 460px;
+  max-width: 1180px;
+  box-shadow: 2px 2px 6px #0000001a;
+  position: relative;
+
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+#div-profissionais h2{
+
+  position: absolute;
+  top: 9%;
+  left: 8%
+
 }
 
-.card img {
-  width: 80px;
-  margin-bottom: 10px;
+.cards-profissionais {
+
+  display: flex;
+  flex-direction: row;
+  gap: clamp(15px, 2dvw, 30px);
+  padding: 0px 30px;
+  position: absolute;
+  bottom: 43%;
+  right: 50%;
+  transform: translate(+50%, +50%)
+
 }
 
-.card h3 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
+.card{
+
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
-.card p {
-  color: var(--dark-color);
-  font-size: 0.95rem;
+.card img{
+  
+  width: clamp(120px, 21.5dvw ,240px);
+  height: auto;
+
 }
 
-/*  SOBRE  */
+.card h3{
+
+  font-weight: 500;
+  font-size: clamp(0.875rem, 1.75dvw, 1.125rem);
+
+}
+
+.card p{
+
+  font-weight: 400;
+  font-size: clamp(0.75rem, 1.5dvw, 1rem);
+
+}
+
+/* ====== SOBRE ====== */
 #sobre {
   background-color: var(--light-color);
   padding: 60px 20px;
