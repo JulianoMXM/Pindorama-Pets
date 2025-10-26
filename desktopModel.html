@@ -358,24 +358,69 @@
             
             <!-- Contato -->
             <section id="contato">
-                <h2>Entre em contato</h2>
-                <div class="cards">
-                    <div class="card">
-                        <h3>Localização</h3>
-                        <p>Rua - Fulana de tal, 9999<br>CEP 99999-999<br>Pindorama/SP</p>
-                        <img src="imagem/mapa 1.png" alt="Mapa Pindorama">
-                        <p><strong>(99) 99999-9999</strong></p>
-                        <p>@PindoramaClinica</p>
-                    </div>
-                    <div class="card">
-                        <form>
-                            <input type="text" placeholder="Nome" required>
-                            <input type="text" placeholder="Sobrenome" required>
-                            <input type="email" placeholder="E-mail" required>
-                            <textarea placeholder="Mensagem" required></textarea>
-                            <button type="submit">Enviar</button>
+                <div class = "container-menor" id = "div-total-contato">
+                    <h2>Entre em contato</h2>
+
+                    <div class = "container-menor" id = "div-contato">
+                        <div id = "div-localizacao">
+                            <span id="titulo">Localização</span>
+                            <span id="texto">
+                                Rua - Fulana de tal, 9999<br>
+                                CEP 99999-999<br>
+                                Pindorama/SP
+                            </span>
+                            <img id = "mapa" src = "imagens/contato/mapa.svg">
+
+                            <div id = "icones">
+
+                                <div class = icon id = "whatsapp">
+                                    <img id = "icon-whatsapp" src = "imagens/contato/icon-whatsapp.svg">
+                                    <span>(99)-99999999</span>
+                                </div>
+
+                                <div class = icon id = "instagram">
+                                    <img id = "icon-instagram" src = "imagens/contato/icon-instagram.svg">
+                                    <span>@PindoramaClinica</span>
+                                </div>
+
+                                <div class = icon id = "facebook">
+                                    <img id = "icon-facebook" src = "imagens/contato/icon-face.svg">
+                                    <span>PindoramaClinica</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <form id = "form" action = "/enviar-contato" method = "POST">
+
+                            <div class="form-grupo">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+
+                            <div class="form-grupo">
+                                <label for="sobrenome">Sobrenome</label>
+                                <input type="text" id="sobrenome" name="sobrenome" required>
+                            </div>
+
+                            <div class="form-grupo">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-grupo">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            </div>
+
+                            <div class="form-grupo">
+                                <button type="submit">ENVIAR</button>
+                            </div>
+
                         </form>
                     </div>
+
                 </div>
             </section>
         </main>
