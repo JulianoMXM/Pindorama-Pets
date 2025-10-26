@@ -14,7 +14,9 @@
 
   --blue-light-background: #89C5D5;     /*background da parte de serviço e quem somos*/
 
-  --font-primary: 'Poppins', sans-serif;
+  --font-Poppins: 'Poppins', sans-serif;
+  --font-Inter: 'Inter', sans-serif;
+  --font-Sans: 'Open Sans', sans-serif;
 }
 
 /* RESET E CONFIGURAÇÕES BASE */
@@ -22,7 +24,6 @@
   margin: 0;
   padding: 0;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -48,9 +49,15 @@ html {
 }
 
 body {
-  font-family: var(--font-primary);
+  font-family: var(--font-Poppins);
   color: var(--dark-color);
   background-color: var(--white-background);
+}
+
+p {
+
+  font-family: var(--font-Sans);
+
 }
 
 /*  CABEÇALHO  */
@@ -128,7 +135,13 @@ header {
 
 }
 
-/*  BANNER  */
+#menu-mobile{
+
+  display: none;
+
+}
+
+/* ====== BANNER ====== */
 
 #inicio{
 
@@ -148,10 +161,10 @@ header {
   box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
 }
 
-#banner-central h1{
+#texto-banner-central{
 
   color: var(--dark-color);
-  font-size: clamp(1rem, 2.5dvw, 1.75rem);
+  font-size: 28px;
 
 }
 
@@ -175,14 +188,14 @@ header {
 
 }
 
-#banner-central-imagens{
+.banner-central-imagens{
 
   max-width: 50%;
   max-height: 100%;
 
 }
 
-#pets-detail{
+#pets-detalhe{
 
   width: clamp(150px, 25dvw, 283px);
   position: absolute;
@@ -329,7 +342,7 @@ header {
   font-weight: 700;
   color: var(--dark-color);
   border-radius: 4px;
-  font-family: var(--font-primary);
+  font-family: var(--font-Poppins);
   position: absolute;
 
 }
@@ -579,6 +592,14 @@ header {
 
 }
 
+#quem-somos-texto-mobile{
+
+  display: none;
+  font-size: 16px;
+
+
+}
+
 /* ====== SERVIÇOS 1 ====== */
 
 #servicos-1{
@@ -729,6 +750,7 @@ header {
 
   font-weight: 500;
   font-size: clamp(0.875rem, 1.75dvw, 1.125rem);
+  font-family: var(--font-Inter);
 
 }
 
@@ -736,6 +758,7 @@ header {
 
   font-weight: 400;
   font-size: clamp(0.75rem, 1.5dvw, 1rem);
+  font-family: var(--font-Inter);
 
 }
 
@@ -807,12 +830,16 @@ header {
 
   font-weight: 400;
   font-size: clamp(0.875rem, 1.75dvw, 1.125rem);
+  font-family: var(--font-Sans);
+  padding-bottom: 10px;
+  padding-top: 10px;
   
 }
 
 .avaliacao blockquote{
 
   max-width: 750px;
+  font-family: var(--font-Sans);
 
 }
 
@@ -905,12 +932,19 @@ header {
 
 }
 
+#contato *{
+
+  font-family: var(--font-Inter);
+
+}
+
 #div-total-contato{
 
   height: 745px;
   display: flex;
   flex-direction: column;  
   align-items: flex-start;
+  margin-top: 60px;
 
 }
 
@@ -922,6 +956,7 @@ header {
   flex-direction: row;
   border-radius: 8px;
   box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+  margin-top: auto;
   
 
 }
@@ -967,22 +1002,6 @@ header {
 
 }
 
-#form{
-
-  box-sizing: border-box;
-  max-width: 600px;
-  height: 692px;
-  background-color: var(--white);
-  margin: 0;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(6, 54, 67, 0.4);
-  border-left-width: 0;
-
-}
-
 #icones{
 
   padding-left: 0px;
@@ -992,6 +1011,12 @@ header {
   gap: 10px;
   margin-top: auto;
   padding-bottom: 15px;
+
+}
+
+#icones *{
+
+  font-family: var(--font-Sans);
 
 }
 
@@ -1029,8 +1054,18 @@ header {
 
 #form{
 
+  box-sizing: border-box;
   max-width: 620px;
   width: 100%;
+  height: 692px;
+  background-color: var(--white);
+  margin: 0;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(6, 54, 67, 0.4);
+  border-left-width: 0;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -1038,8 +1073,8 @@ header {
 
 }
 
-
-#form input, textarea{
+#form input,
+#form textarea{
 
   max-width: 520px;
   width: 100%;
@@ -1050,7 +1085,6 @@ header {
   border-color: rgba(0,0,0, 0.4);
   box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
   box-sizing: border-box;
-  padding: 15px;
   font-size: 20px;
 
 }
@@ -1078,9 +1112,9 @@ header {
 
 }
 
-.form-grupo:first-of-type{
+.form-grupo:first-child{
 
-  padding-top: 40px;
+  padding-top: 50px;
 
 }
 
@@ -1088,7 +1122,7 @@ header {
 
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 
 }
 
@@ -1103,7 +1137,7 @@ header {
   border-radius: 8px;
   padding: 16px 20px;
   border-style:none;
-  font-family: var(--font-primary);
+  font-family: var(--font-Poppins);
   cursor: pointer;
 
 }
@@ -1204,39 +1238,104 @@ header {
 
 /* ====== RESPONSIVIDADE (CELULAR) ====== */
 @media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    padding: 15px 20px;
+  
+  .container, .container-menor {
+
+    padding: 0;
+
   }
 
-  #nav-links {
+  header{
+
+    height: auto;
+    padding: 5px 0px;
+    border-top-style: solid;
+    border-top-color: var(--white-background);
+    border-top-width: 40px;
+    box-shadow: none;
+
+  }
+
+  #nav-links ul,
+  #nav-links li,
+  #nav-links span{
+
     display: none;
-    flex-direction: column;
-    background-color: var(--light-color);
-    width: 100%;
-    padding: 10px;
-  } 
 
-  .nav-links.ativo {
-    display: flex;
   }
 
-  .menu-btn {
+  #nav-links{
+
+    position: relative;
+    height: 70px;
+
+  }
+
+  #logoImagem{
+
+    margin: 0;
+    height: 44px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+  }
+  
+  #menu-mobile{
+
     display: block;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+
   }
 
-  .cards {
-    flex-direction: column;
-    align-items: center;
+  #inicio{
+
+    padding: 0;
+
   }
 
-  .card {
-    width: 90%;
-    max-width: 300px;
+  #banner-central{
+
+    background-color: var(--white-background);
+    box-shadow: none;
+
   }
 
-  form {
-    width: 90%;
+  #pets-detalhe{
+
+    width: 88.5dvw;
+    height: auto;
+    top: -16.5%;
+    right: 2.2%;
+
   }
+
+  #pets{
+
+    bottom: 10%;
+    right: 50%;
+    transform: translate(50%);
+
+  }
+
+  #texto-banner-central{
+
+    position: absolute;
+    font-size: 24px;
+    top: 20px;
+    left: 15%;
+
+  }
+
+  #img-nome{
+
+    display: none;
+
+  }
+
+  
 }
 

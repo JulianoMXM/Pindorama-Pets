@@ -121,28 +121,48 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 300);
 
   });
+  
+  //========== RESPONSIVIDADE ===========//
 
+  const logoImagem = document.querySelector("#logoImagem");
+  const petsDetalhe = document.querySelector("#pets-detalhe");
+  const textoCentral = document.querySelector("#texto-banner-central");
+  const imagemQuemSomos = document.querySelector("#img-logo");
+
+
+  const logoDesktop = "imagens/logo/logoCompleta.svg";
+  const logoMobile = "imagens/logo/logoMobile.svg";
+  const detalheDesktop = "imagens/banner-central/waveform.svg";
+  const detalheMobile = "imagens/banner-central/elipse.svg";
+  const quemSomosDesktop = "imagens/logo/logoCompleta.svg";
+  const quemSomosMobile = "imagens/logo/logoMobileBranca.svg";
+
+  function ajustarResponsividade() {
+
+    if(window.innerWidth <= 768){
+
+      logoImagem.src = logoMobile;
+      petsDetalhe.src = detalheMobile;
+      textoCentral.innerHTML = "Cuidamos do seu<br>animal com muito<br>amor";
+      imagemQuemSomos.src = quemSomosMobile;
+      
+
+
+    } else {
+      
+      logoImagem.src = logoDesktop;
+      petsDetalhe.src = detalheDesktop;
+      textoCentral.innerHTML = "Cuidando do Seu Pet com<br>Profissionalismo e Carinho";
+      imagemQuemSomos.src = quemSomosDesktop;
+
+    }
+
+  }
+
+  window.addEventListener('resize', ajustarResponsividade);
+  
 });
 
-
-
-// 2. Passa por cada seta na lista
-setas_avaliacao.forEach(seta => {
-
-  // 3. Adiciona um ouvinte de clique a CADA seta
-  seta.addEventListener("click", function() {
-
-      // 4. Adiciona a classe .clicado IMEDIATAMENTE
-      seta.classList.add("clicado");
-
-      // 5. Cria um "timer" para remover a classe
-      setTimeout(function() {
-          // Este código roda DEPOIS de 300ms
-          seta.classList.remove("clicado");
-      }, 300); // 300 milissegundos = 0.3s
-
-  });
-});
 
 
 
