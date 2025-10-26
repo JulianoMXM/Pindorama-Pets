@@ -897,7 +897,13 @@ header {
 
 }
 
-/* CONTATO */
+/* ====== CONTATO ====== */
+
+#contato{
+
+  padding-bottom: 30px;
+
+}
 
 #div-total-contato{
 
@@ -1019,74 +1025,181 @@ header {
   
 }
 
-#form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 40px;
-  padding-top: 51px;
-  padding-right: 40px;
-  box-sizing: border-box;
-  gap: 10px;
+/* ====== FORMULÁRIO ====== */
+
+#form{
+
+  max-width: 620px;
   width: 100%;
-  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 25px;
 
 }
 
-#form label{
 
-  font-weight: 700;
+#form input, textarea{
+
+  max-width: 520px;
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0,0,0, 0.4);
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  padding: 15px;
   font-size: 20px;
 
 }
 
 #form textarea{
 
-  width: 100%;
+  resize: none;
 
 }
 
-input,
-textarea {
-  width: 100%;
+#form #mensagem{
+
+  height: 120px;
+
+}
+
+.form-grupo{
+
   box-sizing: border-box;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid var(--accent-color);
-  font-family: inherit;
-  font-size: 1rem;
-  color: var(--dark-color);
-  background-color: var(--light-color);
+  padding-right: 40px;
+  padding-left: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
 }
 
-textarea {
-  resize: vertical;
-  min-height: 100px;
+.form-grupo:first-of-type{
+
+  padding-top: 40px;
+
 }
 
-button[type="submit"] {
+#form label{
+
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 5px;
+
+}
+
+#submit{
+
   background-color: var(--accent-color);
   color: var(--light-color);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  max-width: 144px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 16px 20px;
+  border-style:none;
+  font-family: var(--font-primary);
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+
 }
 
-button[type="submit"]:hover {
-  background-color: var(--primary-color);
+#submit:hover{
+
+  background-color: var(--dark-color);
+
 }
 
 /* ====== RODAPÉ ====== */
-footer {
+
+#footer-linha{
+
+  display: flex;
+  flex-direction: row;
+  height: 232px;
+  background-color: var(--light-color);
+  width: 100%;
+  justify-content: center;
+  align-items: top;
+
+  gap: clamp(55px, 10dvw, 200px);
+  box-sizing: border-box;
+  padding: 40px;
+  
+}
+
+.footer-coluna{
+
+  display:flex;
+  flex-direction: column;
+
+}
+
+#footer-imagem{
+
+  align-items: center;
+
+}
+
+#footer-img-logo{
+
+  padding-bottom: 10px;
+
+}
+
+.footer-coluna h4{
+
+  text-transform: uppercase;
+
+}
+
+.footer-coluna li{
+
+  list-style: none;
+  text-transform: uppercase;
+  padding-top: 5px;
+
+}
+
+#footer-img-logo{
+
+  width: 82.5px;
+  height: auto;
+
+}
+
+#footer-img-nome{
+
+  width: 123px;
+  height: auto;
+
+}
+
+#contato-linha{
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  box-sizing: border-box;
+  padding: 5px;
+
+}
+
+#copyright{
+
   background-color: var(--dark-color);
-  color: var(--light-color);
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  font-size: 0.9rem;
+  color: var(--white);
+  height: 40px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 /* ====== RESPONSIVIDADE (CELULAR) ====== */
