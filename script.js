@@ -54,38 +54,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
   moverParaSlide(0);
 
-});
+  //========== AVALIAÇÃO ===========//
 
-const setas_avaliacao = document.querySelectorAll(".seta");
+  const paginasAvaliacao = document.querySelectorAll(".avaliacao");
+  const nextSeta = document.querySelector("#seta-next");
+  const backSeta = document.querySelector("#seta-back");
 
-// 2. Passa por cada seta na lista
-setas_avaliacao.forEach(seta => {
+  let paginaAtual = 0;
+  const totalPaginas = Math.ceil(paginasAvaliacao.length/3);
+  const paginaAtualAvaliacao = document.querySelector("#pagina-atual-avaliacao");
 
-  // 3. Adiciona um ouvinte de clique a CADA seta
-  seta.addEventListener("click", function() {
-
-      // 4. Adiciona a classe .clicado IMEDIATAMENTE
-      seta.classList.add("clicado");
-
-      // 5. Cria um "timer" para remover a classe
-      setTimeout(function() {
-          // Este código roda DEPOIS de 300ms
-          seta.classList.remove("clicado");
-      }, 300); // 300 milissegundos = 0.3s
-
-  });
-});
-
-const paginasAvaliacao = document.querySelectorAll(".avaliacao");
-
-const nextSeta = document.querySelector("#seta-next");
-const backSeta = document.querySelector("#seta-back");
-
-let paginaAtual = 0;
-const totalPaginas = Math.ceil(paginasAvaliacao.length/3);
-const paginaAtualAvaliacao = document.querySelector("#pagina-atual-avaliacao");
-
-function moverParaAvaliacao(paginaAtualIndice){
+  function moverParaAvaliacao(paginaAtualIndice){
 
   if(paginaAtualIndice === (totalPaginas-1)){
     nextSeta.classList.remove("active");
@@ -119,18 +98,52 @@ function moverParaAvaliacao(paginaAtualIndice){
 
   paginaAtualAvaliacao.textContent = paginaAtualIndice + 1;
 
-}
+  }
 
-nextSeta.addEventListener("click", function(){
+  nextSeta.addEventListener("click", function(){
 
-  moverParaAvaliacao(paginaAtual + 1);
+    moverParaAvaliacao(paginaAtual + 1);
+
+    nextSeta.classList.add("clicado");
+    setTimeout(function() {
+      nextSeta.classList.remove("clicado");
+    }, 300);
+
+  });
+
+  backSeta.addEventListener("click", function(){
+
+    moverParaAvaliacao(paginaAtual - 1);
+
+    backSeta.classList.add("clicado");
+    setTimeout(function() {
+      backSeta.classList.remove("clicado");
+    }, 300);
+
+  });
 
 });
 
-backSeta.addEventListener("click", function(){
 
-  moverParaAvaliacao(paginaAtual - 1);
 
+// 2. Passa por cada seta na lista
+setas_avaliacao.forEach(seta => {
+
+  // 3. Adiciona um ouvinte de clique a CADA seta
+  seta.addEventListener("click", function() {
+
+      // 4. Adiciona a classe .clicado IMEDIATAMENTE
+      seta.classList.add("clicado");
+
+      // 5. Cria um "timer" para remover a classe
+      setTimeout(function() {
+          // Este código roda DEPOIS de 300ms
+          seta.classList.remove("clicado");
+      }, 300); // 300 milissegundos = 0.3s
+
+  });
 });
+
+
 
 
