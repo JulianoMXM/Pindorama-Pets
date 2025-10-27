@@ -128,7 +128,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const petsDetalhe = document.querySelector("#pets-detalhe");
   const textoCentral = document.querySelector("#texto-banner-central");
   const imagemQuemSomos = document.querySelector("#img-logo");
-
+  const divAvaliacao = document.querySelector("#div-avaliacoes");
+  const avaliacaoFilhos = divAvaliacao.children;
 
   const logoDesktop = "imagens/logo/logoCompleta.svg";
   const logoMobile = "imagens/logo/logoMobile.svg";
@@ -147,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
       petsDetalhe.src = detalheMobile;
       textoCentral.innerHTML = "Cuidamos do seu<br>animal com muito<br>amor";
       imagemQuemSomos.src = quemSomosMobile;
+      avaliacaoFilhos[0].textContent = "Avaliações (9)";
       
 
 
@@ -156,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
       petsDetalhe.src = detalheDesktop;
       textoCentral.innerHTML = "Cuidando do Seu Pet com<br>Profissionalismo e Carinho";
       imagemQuemSomos.src = quemSomosDesktop;
+      avaliacaoFilhos[0].textContent = "Avaliações (34)";
 
     }
 
