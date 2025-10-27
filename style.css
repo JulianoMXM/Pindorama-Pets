@@ -65,7 +65,7 @@ header {
   background-color: var(--light-color);
   display: flex;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -158,7 +158,8 @@ header {
   padding: 55px 75px;
   background-color: var(--light-color);
   border-radius: 8px;
-  box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
 }
 
 #texto-banner-central{
@@ -253,6 +254,8 @@ header {
 
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
 
 }
 
@@ -659,7 +662,7 @@ header {
   background-color: var(--blue-light-background);
   background-image: url(imagens/servicos/fundo-animais.svg);
   box-sizing: border-box;
-
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -695,6 +698,8 @@ header {
 #profissionais{
 
   padding-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 
 }
 
@@ -704,7 +709,7 @@ header {
   border-radius: 8px;
   height: 460px;
   max-width: 1180px;
-  box-shadow: 2px 2px 6px #0000001a;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
   position: relative;
 
 }
@@ -1083,7 +1088,7 @@ header {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0,0,0, 0.4);
-  box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   font-size: 20px;
 
@@ -1342,7 +1347,7 @@ header {
     display: block;
   }
 
-  /* CAMPANHA MOBILE - CORREÇÃO DO BANNER 2 */
+  /* ====== CAMPANHA MOBILE - CORREÇÃO DO BANNER 2 ====== */
   #carrossel-banners {
     height: 250px;
     overflow: hidden;
@@ -1384,7 +1389,7 @@ header {
     text-decoration: none;
   }
 
-  /* Banner 1 mobile */
+  /* ====== Banner 1 mobile ====== */
   .banner-1 {
     background-color: var(--blue-background);
     display: flex;
@@ -1408,7 +1413,7 @@ header {
     color: var(--accent-color);
   }
 
-  /* Banner 2 mobile - CORRIGIDO */
+  /* ====== Banner 2 mobile - CORRIGIDO ====== */
   .banner-2 {
     background-color: var(--dark-color);
     display: flex;
@@ -1446,7 +1451,7 @@ header {
     background-color: var(--banner-button-hover);
   }
 
-  /* Banner 3 mobile */
+  /* ====== Banner 3 mobile ====== */
   .banner-3 {
     display: flex;
     flex-direction: column;
@@ -1470,7 +1475,7 @@ header {
     margin-bottom: 15px;
   }
 
-  /* BOTÕES CAMPANHA */
+  /* ====== BOTÕES CAMPANHA ====== */
   #botoes-campanha {
     padding: 15px 0;
     gap: 15px;
@@ -1485,7 +1490,7 @@ header {
     height: 30px;
   }
 
-  /* QUEM SOMOS MOBILE */
+  /* ====== QUEM SOMOS MOBILE ====== */
   #div-quem-somos {
     flex-direction: column;
     height: auto;
@@ -1546,7 +1551,7 @@ header {
     padding: 0 15px;
   }
 
-  /* PROFISSIONAIS MOBILE */
+  /* ====== PROFISSIONAIS MOBILE ====== */
   #profissionais {
     padding-top: 20px;
   }
@@ -1584,7 +1589,7 @@ header {
     font-size: 14px;
   }
 
-  /* AVALIAÇÕES MOBILE */
+  /* ====== AVALIAÇÕES MOBILE ====== */
   #avaliacoes {
     padding-top: 30px;
   }
@@ -1662,7 +1667,7 @@ header {
     display: none;
   }
 
-  /* CONTATO MOBILE */
+  /* ====== CONTATO MOBILE ====== */
   #contato {
     padding-bottom: 20px;
   }
@@ -1670,60 +1675,83 @@ header {
   #div-total-contato {
     height: auto;
     margin-top: 30px;
+    padding: 0;
+    height: 529px;
+    background-color: var(--white);
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    vertical-align: center;
+  }
+
+  #div-total-contato:first-child{
+
+    justify-content: center;
+
   }
 
   #div-contato {
     flex-direction: column;
     margin-top: 0;
+    box-shadow: none;
+    justify-content: flex-end;
+    vertical-align: center;
   }
 
-  #div-localizacao,
+  #div-contato h2{
+
+    display: flex;
+    padding-top: 30px;
+
+
+  }
+
+  #div-localizacao{
+
+    display: none;
+
+  }
+
   #form {
     width: 100%;
     max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    height: 453px;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    gap: 15px;
+    justify-content: flex-end;
   }
 
-  #div-localizacao {
-    border: 1px solid rgba(6, 54, 67, 0.4);
-    height: auto;
-    padding: 20px;
-  }
+  .form-grupo:first-child{
 
-  #div-localizacao #titulo {
-    font-size: 18px;
-    padding-top: 20px;
-  }
-
-  #div-localizacao #texto {
-    font-size: 16px;
-    padding-top: 15px;
-  }
-
-  #form {
-    border: 1px solid rgba(6, 54, 67, 0.4);
-    height: auto;
-    padding: 20px 0;
-  }
-
-  .form-grupo {
-    padding: 0 20px;
-  }
-
-  .form-grupo:first-child {
     padding-top: 0;
+    
   }
 
-  #form input,
-  #form textarea {
+  .form-grupo:last-child{
+
+    padding-bottom: 25px;
+    padding-top: 10px;
+
+  }
+
+  #form label{
+
+    font-size: 13.1px;
+    padding-bottom: 5px;
+
+  }
+
+  #form input{
     max-width: 100%;
     font-size: 16px;
-    height: 50px;
+    height: 40px;
   }
 
   #form #mensagem {
-    height: 100px;
+    height: 78px;
+    max-width: 100%;
   }
 
   #mapa {
@@ -1734,12 +1762,13 @@ header {
 
   #submit {
     margin: 0 auto;
-    display: block;
     font-size: 16px;
-    padding: 12px 16px;
+    width: 147.35px;
+    height: 56.28px;
+    padding: 0;
   }
 
-  /* FOOTER MOBILE */
+  /* ====== FOOTER MOBILE ====== */
   #footer-linha {
     flex-direction: column;
     height: auto;
@@ -1764,21 +1793,19 @@ header {
     font-size: 14px;
   }
 
-  #footer-img-logo {
-    width: 60px;
+  #footer-imagem{
+
+    display: none;
+
   }
 
-  #footer-img-nome {
-    width: 100px;
-  }
-
-  /* UTILITÁRIOS */
+  /* ====== UTILITÁRIOS ====== */
   #img-nome {
     display: none;
   }
 }
 
-/* Correções para telas muito pequenas */
+/* ====== Correções para telas muito pequenas ====== */
 @media (max-width: 480px) {
   #texto-banner-central {
     font-size: 18px;
