@@ -1235,6 +1235,9 @@ header {
   align-items: center;
 
 }
+
+
+
 /* ====== RESPONSIVIDADE (CELULAR) ====== */
 @media (max-width: 768px) {
   
@@ -1242,7 +1245,7 @@ header {
     padding: 0 15px;
   }
 
-  /* HEADER MOBILE */
+  /* ====== HEADER MOBILE ====== */
   header {
     height: auto;
     padding: 10px 0;
@@ -1285,7 +1288,7 @@ header {
     z-index: 1000;
   }
 
-  /* BANNER CENTRAL MOBILE */
+  /* ====== BANNER CENTRAL MOBILE ====== */
   #inicio {
     padding: 0;
     margin-top: 20px;
@@ -1302,14 +1305,19 @@ header {
   }
 
   #texto-banner-central {
-    font-size: 20px;
+    font-size: 70px;
+    line-height: 1.4;
     position: static;
-    margin-bottom: 20px;
+    z-index: 10;
+    margin-bottom: 0 0 20px 20px;
     display: block;
+    text-align: left;
+    max-width: 90%;
   }
 
   #botao-banner {
     position: relative;
+    z-index: index 10;
     top: auto;
     left: auto;
     transform: none;
@@ -1324,16 +1332,16 @@ header {
   }
 
   #pets-detalhe {
-    width: 80%;
+    width: 110%;
     position: absolute;
-    top: -10%;
-    right: 10%;
-    z-index: 1;
+    top: -15%;
+    right: -10%;
+    z-index: 0;
   }
 
   #pets {
-    width: 90%;
-    max-width: 300px;
+    width: 110%;
+    max-width: none;
     position: relative;
     bottom: auto;
     right: auto;
@@ -1342,179 +1350,80 @@ header {
     display: block;
   }
 
-  /* CAMPANHA MOBILE - CORREÇÃO DO BANNER 2 */
-  #carrossel-banners {
-    height: 250px;
-    overflow: hidden;
-    position: relative;
-  }
+  /* ====== CAMPANHA MOBILE ====== */
+  
+  #campanha{
 
-  .slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-  }
-
-  .slide #titulo {
-    font-size: 18px;
-    position: static;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-
-  .slide #texto {
-    font-size: 14px;
-    position: static;
-    margin-bottom: 15px;
-    max-width: 90%;
-    line-height: 1.4;
-  }
-
-  .saiba-mais {
-    position: static;
-    font-size: 14px;
-    padding: 8px 16px;
-    margin-top: 10px;
-    display: inline-block;
-    text-decoration: none;
-  }
-
-  /* Banner 1 mobile */
-  .banner-1 {
-    background-color: var(--blue-background);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .banner-1 #patinha-1,
-  .banner-1 #patinha-2,
-  .banner-1 #seringa,
-  .banner-1 #gato-sombra {
     display: none;
-  }
 
-  .banner-1 #titulo {
-    color: var(--dark-color);
   }
+ /* ====== QUEM SOMOS MOBILE ====== */
+/* ====== QUEM SOMOS MOBILE ====== */
+#div-quem-somos {
+  flex-direction: column;
+  height: auto;
+  min-height: 450px;
+  padding: 40px 20px 30px;
+  text-align: center;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 25px; /* Adiciona espaço entre os elementos */
+}
 
-  .banner-1 #texto {
-    color: var(--accent-color);
-  }
+#quem-somos-imagem {
+  padding-right: 0;
+  height: 102.5px;
+  width: 167px;
+  order: 1; /* Garante que a imagem vem primeiro */
+}
 
-  /* Banner 2 mobile - CORRIGIDO */
-  .banner-2 {
-    background-color: var(--dark-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: none; /* Remove imagem de fundo complexa */
-  }
+#quem-somos-imagem #img-logo {
+  height: 102.5px;
+  width: 100%;
+}
 
-  .banner-2 #cachorro,
-  .banner-2 #gato-lateral {
+#quem-somos-texto {
+  position: static;
+  padding: 0 15px;
+  order: 2; /* Garante que o texto vem depois */
+  width: 100%;
+}
+
+#quem-somos-texto #texto-titulo {
+  width: 100%;
+  font-size: 28px;
+  position: static; /* Remove o position absolute */
+  left: auto;
+  top: auto;
+  transform: none;
+  margin: 0 0 20px 0; /* Espaço abaixo do título */
+  text-align: center;
+}
+
+#quem-somos-texto p {
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+#texto-destaque {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 10px;
+}
+  /* ====== SERVIÇOS MOBILE ====== */
+
+  #div-servicos-2{
+
     display: none;
+
   }
 
-  .banner-2 #titulo {
-    color: #FFFFFF;
-    position: static;
-    margin-bottom: 10px;
-  }
-
-  .banner-2 #texto {
-    color: #FAFDFF;
-    width: 90%;
-    position: static;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .banner-2 .saiba-mais {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-  }
-
-  .banner-2 .saiba-mais:hover {
-    background-color: var(--banner-button-hover);
-  }
-
-  /* Banner 3 mobile */
-  .banner-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .banner-3 #agua,
-  .banner-3 #gato-banho {
-    display: none;
-  }
-
-  .banner-3 #titulo {
-    position: static;
-    margin-bottom: 10px;
-  }
-
-  .banner-3 #texto {
-    color: var(--dark-color);
-    position: static;
-    margin-bottom: 15px;
-  }
-
-  /* BOTÕES CAMPANHA */
-  #botoes-campanha {
-    padding: 15px 0;
-    gap: 15px;
-  }
-
-  .botao-campanha {
-    width: 15px;
-    height: 15px;
-  }
-
-  #arrow-back, #arrow-next {
-    height: 30px;
-  }
-
-  /* QUEM SOMOS MOBILE */
-  #div-quem-somos {
-    flex-direction: column;
-    height: auto;
-    padding: 30px 0;
-    text-align: center;
-  }
-
-  #quem-somos-imagem {
-    padding-right: 0;
-    margin-bottom: 20px;
-  }
-
-  #quem-somos-texto {
-    position: static;
-    padding: 0 15px;
-  }
-
-  #quem-somos-texto p {
-    max-width: 100%;
-    font-size: 14px;
-  }
-
-  #quem-somos-imagem #img-logo {
-    height: 80px;
-  }
-
-  /* SERVIÇOS MOBILE */
-  #div-servicos-1,
-  #div-servicos-2 {
+  #div-servicos-1{
     flex-direction: column;
     height: auto;
     padding: 30px 0;
@@ -1534,19 +1443,12 @@ header {
     font-size: 14px;
   }
 
-  #servicos-1-imagem img,
-  #servicos-2 img {
+  #servicos-1-imagem img{
     padding: 20px 0;
     width: 70%;
     max-width: 250px;
   }
-
-  #servicos-2 p {
-    font-size: 14px;
-    padding: 0 15px;
-  }
-
-  /* PROFISSIONAIS MOBILE */
+/* PROFISSIONAIS MOBILE */
   #profissionais {
     padding-top: 20px;
   }
@@ -1811,7 +1713,3 @@ header {
     font-size: 13px;
   }
 }
-
-
-
-
