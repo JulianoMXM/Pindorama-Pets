@@ -132,8 +132,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const logoDesktop = "imagens/logo/logoCompleta.svg";
   const logoMobile = "imagens/logo/logoMobile.svg";
+
   const detalheDesktop = "imagens/banner-central/waveform.svg";
   const detalheMobile = "imagens/banner-central/elipse.svg";
+
   const quemSomosDesktop = "imagens/logo/logoCompleta.svg";
   const quemSomosMobile = "imagens/logo/logoMobileBranca.svg";
 
