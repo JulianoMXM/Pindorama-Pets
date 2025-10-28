@@ -128,14 +128,28 @@ document.addEventListener("DOMContentLoaded", function() {
   const petsDetalhe = document.querySelector("#pets-detalhe");
   const textoCentral = document.querySelector("#texto-banner-central");
   const imagemQuemSomos = document.querySelector("#img-logo");
-
+  const divAvaliacao = document.querySelector("#div-avaliacoes");
+  const avaliacaoFilhos = divAvaliacao.children;
+  const servicosTitulo = document.querySelector("#servicos-titulo");
+  const paiDivServicos = document.querySelector("#div-servicos-1");
 
   const logoDesktop = "imagens/logo/logoCompleta.svg";
   const logoMobile = "imagens/logo/logoMobile.svg";
+
   const detalheDesktop = "imagens/banner-central/waveform.svg";
   const detalheMobile = "imagens/banner-central/elipse.svg";
+
   const quemSomosDesktop = "imagens/logo/logoCompleta.svg";
   const quemSomosMobile = "imagens/logo/logoMobileBranca.svg";
+
+  const novoGatoSombra = document.createElement("img");
+  novoGatoSombra.src = "imagens/campanha/banner-1/gato-sombra.svg";
+  novoGatoSombra.id = "gato-sombra-servico";
+
+  const novoBotaoServicos = document.createElement("button");
+  novoBotaoServicos.classList.add("botao");
+  novoBotaoServicos.id = "botao-servico";
+  novoBotaoServicos.textContent = "Agende uma consulta";
 
   function ajustarResponsividade() {
 
@@ -145,8 +159,19 @@ document.addEventListener("DOMContentLoaded", function() {
       petsDetalhe.src = detalheMobile;
       textoCentral.innerHTML = "Cuidamos do seu<br>animal com muito<br>amor";
       imagemQuemSomos.src = quemSomosMobile;
+      avaliacaoFilhos[0].textContent = "Avaliações (9)";
+      servicosTitulo.textContent = "Nossos serviços visam o cuidado do seu pet";
       
+      if(!novoBotaoServicos.parentNode){
 
+        paiDivServicos.appendChild(novoBotaoServicos);
+
+      }
+      if(!novoGatoSombra.parentNode){
+
+        paiDivServicos.appendChild(novoGatoSombra);
+
+      }
 
     } else {
       
@@ -154,6 +179,19 @@ document.addEventListener("DOMContentLoaded", function() {
       petsDetalhe.src = detalheDesktop;
       textoCentral.innerHTML = "Cuidando do Seu Pet com<br>Profissionalismo e Carinho";
       imagemQuemSomos.src = quemSomosDesktop;
+      avaliacaoFilhos[0].textContent = "Avaliações (34)";
+      servicosTitulo.textContent = "Nossos serviços";
+
+      if(novoBotaoServicos.parentNode === paiDivServicos){
+
+        paiDivServicos.removeChild(novoBotaoServicos);
+
+      }
+      if(novoGatoSombra.parentNode === paiDivServicos){
+
+        paiDivServicos.removeChild(novoGatoSombra);
+
+      }
 
     }
 
@@ -162,8 +200,3 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('resize', ajustarResponsividade);
   
 });
-
-
-
-
-
