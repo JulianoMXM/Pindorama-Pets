@@ -1162,7 +1162,7 @@ header {
 
 /* ====== RODAPÉ ====== */
 
-#footer-linha{
+#footer-total{
 
   display: flex;
   flex-direction: row;
@@ -1178,7 +1178,7 @@ header {
   
 }
 
-.footer-coluna{
+.footer-elemento{
 
   display:flex;
   flex-direction: column;
@@ -1197,13 +1197,13 @@ header {
 
 }
 
-.footer-coluna h4{
+.footer-elemento h4{
 
   text-transform: uppercase;
 
 }
 
-.footer-coluna li{
+.footer-elemento li{
 
   list-style: none;
   text-transform: uppercase;
@@ -1749,7 +1749,7 @@ header {
   }
 
   /* ====== FOOTER MOBILE ====== */
-  #footer-linha {
+  #footer-total {
     flex-direction: column;
     height: auto;
     gap: 30px;
@@ -1757,7 +1757,7 @@ header {
     text-align: center;
   }
 
-  .footer-coluna {
+  .footer-elemento {
     align-items: center;
   }
 
@@ -1765,11 +1765,11 @@ header {
     justify-content: center;
   }
 
-  .footer-coluna h4 {
+  .footer-elemento h4 {
     font-size: 16px;
   }
 
-  .footer-coluna li {
+  .footer-elemento li {
     font-size: 14px;
   }
 
