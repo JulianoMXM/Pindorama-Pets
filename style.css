@@ -1404,7 +1404,7 @@ header {
     line-height: 20px;
   }
 
-  #texto-destaque{
+  #quem-somos-texto #texto-destaque{
 
     font-size: 16px;
     font-weight: 700;
@@ -1423,58 +1423,117 @@ header {
 
   #div-servicos-1{
     flex-direction: column;
-    height: auto;
+    height: 330px;
     padding: 30px 0;
     text-align: center;
+    position: relative;
+    justify-content: unset;
+    overflow: hidden;
+    gap: 20px;
+  }
+
+  #div-servicos-1:nth-child(3){
+
+    display: flex;
+    justify-content: flex-end;
+
   }
 
   #servicos-1-imagem span {
     position: static;
     display: block;
-    margin-bottom: 15px;
-    font-size: 18px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: var(--font-Inter);
   }
 
   #servicos-1 p {
     position: static;
     padding: 0 15px;
     font-size: 14px;
+    line-height: 20px;
+  }
+
+  #div-servicos-1 #texto-destaque{
+
+    display: none;
+
   }
 
   #servicos-1-imagem img{
-    padding: 20px 0;
-    width: 70%;
-    max-width: 250px;
+    
+    display: none;
+
+  }
+
+  #botao-servico{
+
+    display: block;
+    height: 39px;
+    width: 207px;
+    background-color: white;
+    font-family: var(--font-Poppins);
+    font-weight: 700;
+    font-size: 15.35px;
+    border-radius: 2px;
+
+  }
+
+  #gato-sombra-servico{
+
+    position: absolute;
+    height: 265px;
+    width: auto;
+    bottom: -52%;
+    right: 50%;
   }
 
   /* ====== PROFISSIONAIS MOBILE ====== */
   #profissionais {
-    padding-top: 20px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 80px;
   }
 
   #div-profissionais {
     height: auto;
-    padding: 20px 0;
+    padding: 0;
   }
 
   #div-profissionais h2 {
-    position: static;
-    text-align: center;
-    margin-bottom: 20px;
+
+    width: 100%;
     font-size: 20px;
+    left: 0;
+    top: -11%;
+    text-align: center;
+    font-size: 24px;
   }
 
   .cards-profissionais {
+
+    height: 493px;
     position: static;
     transform: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 0 15px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3px, 1dvw, 5px);
+    padding: 0;
   }
 
   .card img {
-    width: 150px;
+    width: 166px;
+  }
+
+  .card{
+
+    width: 166px;
+    justify-content: center;
+    margin: 0;
+
   }
 
   .card h3 {
@@ -1482,7 +1541,7 @@ header {
   }
 
   .card p {
-    font-size: 14px;
+    font-size: 11px;
   }
 
   /* ====== AVALIAÇÕES MOBILE ====== */
@@ -1692,10 +1751,6 @@ header {
     padding: 12px;
   }
   
-  .card img {
-    width: 120px;
-  }
-  
   .avaliacao .user {
     height: 50px;
     width: 50px;
@@ -1703,6 +1758,12 @@ header {
   
   #carrossel-banners {
     height: 220px;
+  }
+
+  #gato-sombra-servico{
+
+    
+    right: 0;
   }
   
   
