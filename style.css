@@ -1659,7 +1659,7 @@ header {
 
   /* ====== CONTATO MOBILE ====== */
   #contato {
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
 
   #div-total-contato {
@@ -1760,12 +1760,16 @@ header {
   }
 
   /* ====== FOOTER MOBILE ====== */
+
   #footer-total {
-    flex-direction: column;
+
+    margin-top: 128px;
+    flex-direction: row;
     height: auto;
     gap: 30px;
     padding: 30px 20px;
     text-align: center;
+    position: relative;
   }
 
   .footer-elemento {
@@ -1773,15 +1777,33 @@ header {
   }
 
   #contato-linha {
-    justify-content: center;
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -105px;
+    
   }
 
-  .footer-elemento h4 {
-    font-size: 16px;
+  #contato-linha img{
+    
+    width: 64px;
+    height: auto;
+    
+  }
+
+  #contato-titulo{
+
+    display: none;
+
+  }
+
+  .footer-elemento {
+    font-size: 13px;
   }
 
   .footer-elemento li {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   #footer-imagem{
