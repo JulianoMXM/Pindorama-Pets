@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const avaliacaoFilhos = divAvaliacao.children;
   const servicosTitulo = document.querySelector("#servicos-titulo");
   const paiDivServicos = document.querySelector("#div-servicos-1");
+  const botaoBanner = document.querySelector("#botao-banner");
 
   const logoDesktop = "imagens/logo/logoCompleta.svg";
   const logoMobile = "imagens/logo/logoMobile.svg";
@@ -161,6 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
       imagemQuemSomos.src = quemSomosMobile;
       avaliacaoFilhos[0].textContent = "Avaliações (9)";
       servicosTitulo.textContent = "Nossos serviços visam o cuidado do seu pet";
+      botaoBanner.href = "#div-total-contato";
+
       
       if(!novoBotaoServicos.parentNode){
 
@@ -181,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
       imagemQuemSomos.src = quemSomosDesktop;
       avaliacaoFilhos[0].textContent = "Avaliações (34)";
       servicosTitulo.textContent = "Nossos serviços";
+      botaoBanner.href = "#form";
 
       if(novoBotaoServicos.parentNode === paiDivServicos){
 
