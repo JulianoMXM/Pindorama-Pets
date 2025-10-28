@@ -1309,7 +1309,7 @@ header {
   background-color: var(--white-background);
   box-shadow: none;
   padding: 5px;
-  height: auto;
+  height: clamp(250px, 70dvw, 450px);
   min-height: 180px;
   position: relative;
   text-align: center;
@@ -1318,21 +1318,21 @@ header {
   /* Empilhar conteúdo e reorganizar no mobile */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
-#texto-banner-central {
-  font-size: 42px;
-  line-height: 1.1;
-  position: static;
+#texto-banner-central { 
+  font-size: clamp(24px, 7dvw, 48px);
+  position: absolute;
   z-index: 10;
   margin-bottom: 15px;
   display: block;
   text-align: left;
   max-width: 85%;
-  align-self: flex-start;
   font-weight: bold;
+  left: 0;
+  top: 10%;
 }
 
 #botao-banner {
@@ -1358,7 +1358,8 @@ header {
 #pets-detalhe {
   width: 105%;
   position: absolute;
-  top: -10%;
+  top: unset;
+  bottom: 17%;
   right: -3%;
   z-index: 0;
 }
@@ -1787,7 +1788,8 @@ header {
 /* ====== Correções para telas muito pequenas ====== */
 @media (max-width: 480px) {
   #texto-banner-central {
-    font-size: 18px;
+    font-size: 24px;
+    position: absolute;
   }
   
   #botao-banner {
@@ -1803,6 +1805,12 @@ header {
   
   #carrossel-banners {
     height: 220px;
+  }
+
+  #pets-detalhe{
+
+    bottom: 24%;
+
   }
   
 }
