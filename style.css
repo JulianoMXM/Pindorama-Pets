@@ -877,6 +877,7 @@ header {
   position: absolute;
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 15px;
   bottom: 0;
   right: 0;
@@ -904,12 +905,14 @@ header {
   background-position: center;
 
   opacity: 0;
+  pointer-events: none;
 
 }
 
 .seta.active{
     
   opacity: 1;
+  pointer-events: all;
 
 }
 
@@ -1254,9 +1257,8 @@ header {
   header {
     height: auto;
     padding: 10px 0;
-    border-top: 40px solid var(--white-background);
+    border-top: 30px solid var(--white-background);
     box-shadow: none;
-    position: relative;
   }
 
   #nav-links ul,
