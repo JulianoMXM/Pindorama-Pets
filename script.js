@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const novoGatoSombra = document.createElement("img");
   novoGatoSombra.src = "imagens/campanha/banner-1/gato-sombra.svg";
-  novoGatoSombra.id = "gato-sombra-servicos";
+  novoGatoSombra.id = "gato-sombra-servico";
 
   const novoBotaoServicos = document.createElement("button");
   novoBotaoServicos.classList.add("botao");

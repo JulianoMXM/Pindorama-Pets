@@ -1486,6 +1486,7 @@ header {
     width: auto;
     bottom: -52%;
     right: 50%;
+    transform: translate(120%);
   }
 
   /* ====== PROFISSIONAIS MOBILE ====== */
@@ -1759,13 +1760,6 @@ header {
   #carrossel-banners {
     height: 220px;
   }
-
-  #gato-sombra-servico{
-
-    
-    right: 0;
-  }
-  
   
 }
 
